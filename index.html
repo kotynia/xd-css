@@ -10,234 +10,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    html {
-      line-height: 1.15;
-      -webkit-text-size-adjust: 100%
-    }
-
-    body {
-      margin: 0
-    }
-
-    main {
-      display: block
-    }
-
-    h1 {
-      font-size: 2em;
-      margin: .67em 0
-    }
-
-    hr {
-      box-sizing: content-box;
-      height: 0;
-      overflow: visible
-    }
-
-    pre {
-      font-family: monospace, monospace;
-      font-size: 1em
-    }
-
-    a {
-      background-color: transparent
-    }
-
-    abbr[title] {
-      border-bottom: none;
-      text-decoration: underline;
-      text-decoration: underline dotted
-    }
-
-    b,
-    strong {
-      font-weight: bolder
-    }
-
-    code,
-    kbd,
-    samp {
-      font-family: monospace, monospace;
-      font-size: 1em
-    }
-
-    small {
-      font-size: 80%
-    }
-
-    sub,
-    sup {
-      font-size: 75%;
-      line-height: 0;
-      position: relative;
-      vertical-align: baseline
-    }
-
-    sub {
-      bottom: -.25em
-    }
-
-    sup {
-      top: -.5em
-    }
-
-    img {
-      border-style: none
-    }
-
-    button,
-    input,
-    optgroup,
-    select,
-    textarea {
-      font-family: inherit;
-      font-size: 100%;
-      line-height: 1.15;
-      margin: 0
-    }
-
-    button,
-    input {
-      overflow: visible
-    }
-
-    button,
-    select {
-      text-transform: none
-    }
-
-    [type=button],
-    [type=reset],
-    [type=submit],
-    button {
-      -webkit-appearance: button
-    }
-
-    [type=button]::-moz-focus-inner,
-    [type=reset]::-moz-focus-inner,
-    [type=submit]::-moz-focus-inner,
-    button::-moz-focus-inner {
-      border-style: none;
-      padding: 0
-    }
-
-    [type=button]:-moz-focusring,
-    [type=reset]:-moz-focusring,
-    [type=submit]:-moz-focusring,
-    button:-moz-focusring {
-      outline: 1px dotted ButtonText
-    }
-
-    fieldset {
-      padding: .35em .75em .625em
-    }
-
-    legend {
-      box-sizing: border-box;
-      color: inherit;
-      display: table;
-      max-width: 100%;
-      padding: 0;
-      white-space: normal
-    }
-
-    progress {
-      vertical-align: baseline
-    }
-
-    textarea {
-      overflow: auto
-    }
-
-    [type=checkbox],
-    [type=radio] {
-      box-sizing: border-box;
-      padding: 0
-    }
-
-    [type=number]::-webkit-inner-spin-button,
-    [type=number]::-webkit-outer-spin-button {
-      height: auto
-    }
-
-    [type=search] {
-      -webkit-appearance: textfield;
-      outline-offset: -2px
-    }
-
-    [type=search]::-webkit-search-decoration {
-      -webkit-appearance: none
-    }
-
-    ::-webkit-file-upload-button {
-      -webkit-appearance: button;
-      font: inherit
-    }
-
-    details {
-      display: block
-    }
-
-    summary {
-      display: list-item
-    }
-
-    template {
-      display: none
-    }
-
-    [hidden] {
-      display: none
-    }
-
-    /*002*/
-    html {
-      box-sizing: border-box;
-      height: 100%;
-      position: relative;
-      overflow-x: auto;
-      background-repeat: no-repeat;
-      background-color: var(--xdbackground);
-      font-size: 14px;
-      line-height: 1.250em;
-      font-family: "Open Sans", Arial, sans-serif;
-      color: var(--xddark) !important;
-      text-rendering: optimizeSpeed;
-    }
-
-    *,
-    *:before,
-    *:after {
-      box-sizing: inherit
-    }
-
-
-    /*003*/
-    body {
-      min-height: 100%;
-      position: relative;
-    }
-
+/*Custom*/
     ul {
       padding-inline-start: 32px
     }
-
-
     body {
       font-family: 'Open Sans', sans-serif;
     }
-
-    /*custom code{
-    color: #d63384;
-    word-wrap: break-word;}  */
+    .xd-container > a  { max-width:150px}
   </style>
 </head>
 
 <body>
 <nav style="position: sticky; top: 0px;" class="xd-hide-print" >
-  <div class="xd-container xd-gap-m xd-padding-l xd-light "  >
+  <div class="xd-container xd-gap-m xd-padding-l xd-light xd-grid-mobile-4"  >
     <a class="xd-button xd-border  xd-light" href="#building-blocks">Building Blocks</a>
     <a class="xd-button xd-border  xd-light" href="#containers">Containers</a>
+    <a class="xd-button xd-border  xd-light" href="https://github.com/kotynia/xd.css/blob/main/xd.css">Source code</a>
     <div class="xd-padding">Examples:</div>
 
     <a class="xd-button xd-border  xd-light" href="#grid-examples">Grid</a>
@@ -259,16 +48,16 @@
 
 <div id="top" class=" hide" role="document">
 
-  <article class="xd-content">
+  <article class="xd-content xd-padding-l">
     <h1 class="xd-center">
-      <span class="xd-txt-l">😆 xd.css v0.3</span>
+      <span class="xd-txt-l">😆 xd.css v0.5</span>
     </h1>
-    <h3 class="xd-center">a 100 definitions micro framework</h3>
+    <h3 class="xd-center">a 111 definitions micro framework</h3>
 
     <h2 class="xd-section-s">Why ?</h2>
     <ul >
       <li>
-        easy for beginers, powerfull for profesionals, only 100 definitions, building blocks for any design system
+        easy for beginers, powerfull for profesionals, only 111 definitions, building blocks for any design system
       </li>
       <li>
         dead simple html semantics, mobile, grid, printing support out of box
@@ -290,7 +79,7 @@
     <h2 class="xd-section-s xd-center">Building blocks</h2>
 
     <h3 class="xd-section-m">Containers</h2>
-    <div class="xd-grid-5 xd-center xd-margin xd-gap-l ">
+    <div class="xd-grid-5 xd-center xd-section-m xd-gap-l ">
       <div class="xd-border">
         <code class="xd-box">.xd-content</code>
         <div>(-t -s -m -l)</div>
@@ -302,8 +91,8 @@
         <code class="xd-box">.xd-container</code> <small>Button container</small>
       </div>
     </div>
-    <h3 class="xd-section-m">Basic elements</h3>
-    <div class="xd-grid-5 xd-center xd-margin xd-gap-l ">
+    <h3 >Basic elements</h3>
+    <div class="xd-grid-5 xd-center xd-section-m xd-gap-l ">
 
       <div class="xd-border">
         <code class="xd-box">xd-box</code>
@@ -325,10 +114,6 @@
       </div>
 
       <div class="xd-border">
-        <code class="xd-box">.xd-margin</code>
-        <div>(-t -s -m -l)</div>
-      </div>
-      <div class="xd-border">
         <code class="xd-box">.xd-padding</code>
         <div>(-t -s -m -l)</div>
       </div>
@@ -344,8 +129,8 @@
       </div>
     </div>
 
-    <h3  class="xd-section-m">Colors - backgrounds</h3>
-    <div class="xd-grid-5 xd-margin xd-center xd-gap-l ">
+    <h3 >Colors - backgrounds</h3>
+    <div class="xd-grid-5 xd-section-m xd-center xd-gap-l ">
       <div class="xd-brand xd-box">.xd-brand</div>
       <div class="xd-primary xd-box">.xd-primary</div>
       <div class="xd-secondary xd-box">.xd-secondary</div>
@@ -357,8 +142,8 @@
       <div class="xd-medium xd-box">.xd-medium</div>
       <div class="xd-dark xd-box">.xd-dark</div>
     </div>
-    <h3 class="xd-section-m">Colors - text</h3>
-    <div class="xd-grid-5 xd-margin xd-center xd-gap-l m">
+    <h3 >Colors - text</h3>
+    <div class="xd-grid-5 xd-section-m xd-center xd-gap-l m">
       <div class="xd-txt-brand">.xd-txt-brand</div>
       <div class="xd-txt-primary">.xd-txt-primary</div>
       <div class="xd-txt-secondary">.xd-txt-secondary</div>
@@ -370,8 +155,8 @@
       <div class="xd-txt-medium">.xd-txt-medium</div>
       <div class="xd-txt-dark">.xd-txt-dark</div>
     </div>
-    <h3 class="xd-section-m">Border - colors</h3>
-    <div class="xd-grid-5 xd-margin xd-center xd-gap-l ">
+    <h3 >Border - colors</h3>
+    <div class="xd-grid-5 xd-section-m xd-center xd-gap-l ">
       <div class="xd-border-brand"><code class="xd-box">.xd-border-brand</code></div>
       <div class="xd-border-primary"><code class="xd-box">.xd-border-primary</code></div>
       <div class="xd-border-secondary "><code class="xd-box">.xd-border-secondary</code></div>
@@ -385,9 +170,9 @@
       <div class="xd-border"><code class="xd-box">.xd-border</code></div>
     </div>
 
-    <h3 class="xd-section-m">Helpers</h3>
+    <h3 >Helpers</h3>
 
-    <div class="xd-grid-5 xd-margin xd-gap-l">
+    <div class="xd-grid-5 xd-section-m xd-gap-l">
       <div class="xd-border"><code class="xd-box xd-center">.xd-center</code></div>
       <div class="xd-border"><code class="xd-box xd-left">.xd-left</code></div>
       <div class="xd-border"><code class="xd-box xd-right">.xd-right</code></div>
@@ -396,15 +181,15 @@
       <div class="xd-border"><code class="xd-box">.xd-image</code></div>
       
 </div>
-<h3 class="xd-section-m">Helpers - visibility</h3>
-<div class="xd-grid-5 xd-margin xd-gap-l xd-center">
+<h3 >Helpers - visibility</h3>
+<div class="xd-grid-5 xd-section-m xd-gap-l xd-center">
       <div class="xd-border"><code class="xd-box">.xd-hide-desktop</code> <div class="xd-hide-desktop xd-strong">TEST TEXT</div></div>
       <div class="xd-border "><code class="xd-box">.xd-hide-mobile</code> <div class="xd-hide-mobile xd-strong">TEST TEXT</div></div>
       <div class="xd-border "><code class="xd-box">.xd-hide-print</code> <div class="xd-hide-print xd-strong">TEST TEXT</div></div>
     </div>
 
-    <h3 class="xd-section-m">Grid Desktop only</h3>
-    <div class="xd-grid-5 xd-margin xd-center xd-gap-l ">
+    <h3 >Grid Desktop only</h3>
+    <div class="xd-grid-5 xd-section-m xd-center xd-gap-l ">
       <div class="xd-border"><code class="xd-box">.xd-grid-2</code></div>
       <div class="xd-border"><code class="xd-box">.xd-grid-3</code></div>
       <div class="xd-border"><code class="xd-box">.xd-grid-4</code></div>
@@ -412,8 +197,8 @@
       <div class="xd-border"><code class="xd-box">.xd-grid-12</code></div>
     </div>
 
-    <h3 class="xd-section-m">Grid Mobile only</h3>
-    <div class="xd-grid-5 xd-margin xd-center xd-gap-l ">
+    <h3 >Grid Mobile only</h3>
+    <div class="xd-grid-5 xd-section-m xd-center xd-gap-l ">
       <div class="xd-border"><code class="xd-box">.xd-grid-mobile-2</code></div>
       <div class="xd-border"><code class="xd-box">.xd-grid-mobile-3</code></div>
       <div class="xd-border"><code class="xd-box">.xd-grid-mobile-4</code></div>
@@ -421,15 +206,15 @@
       <div class="xd-border"><code class="xd-box">.xd-grid-mobile-6</code></div>
     </div>
 
-    <h3 class="xd-section-m">Tables</h3>
-    <div class="xd-grid-5 xd-margin xd-center xd-gap-l ">
+    <h3 >Tables</h3>
+    <div class="xd-grid-5 xd-section-m xd-center xd-gap-l ">
       <div class="xd-border"><code class="xd-box">.xd-table</code></div>
     </div>
 
  
 
-    <h3 class="xd-section-m">Unicode safe icons</h3>
-    <div class="xd-grid-12 xd-margin xd-center xd-gap-l xd-txt-m">
+    <h3 >Unicode safe icons</h3>
+    <div class="xd-grid-12  xd-grid-mobile-6 xd-section-m xd-center xd-gap-l xd-txt-m">
       <div>↗️</div>
       <div>⭕</div>
       <div>🔵</div>
@@ -443,8 +228,8 @@
   </article>
 
 
-  <article id="containers" class="xd-section-m">
-    <h2 class="xd-section-s xd-center">Containers</h2>
+  <article id="containers" >
+    <h2 class="xd-section-m xd-center">Containers</h2>
     <div class="xd-content-t  xd-secondary xd-center ">
       <div class="xd-txt-l xd-padding-m"><code>.xd-content-t</code> 540px</div>
     </div>
@@ -466,7 +251,7 @@
   <!-- GRID EXAMPLES -->
 
   <article id="grid-examples" class="xd-light xd-padding-l xd-section-m  xd-round-l xd-content">
-    <h2 class="xd-section-s xd-center">Grid examples</h2>
+    <h2 class="xd-center">Grid examples</h2>
 
     <h3 class="xd-section-m">12 columns desktop, 3 columns mobile, no gap </h3>
     <code class="xd-box-m">.xd-grid-9 .xd-grid-mobile-3 .xd-center</code>
@@ -594,7 +379,7 @@
 
     <h2 class="xd-section-s xd-center">box-model test</h2>
   
-    <div class="xd-grid-3  xd-center xd-gap-l">
+    <div class="xd-grid-4  xd-center xd-gap-l">
       <div>
         <h3 class="xd-section-l">.xd-box</h3>
         <div class="xd-box xd-danger"><code>div.xd-box</code></div>
@@ -621,14 +406,27 @@
       </div>
   
       <div>
-        <h3 class="xd-section-l">.xd-margin</h3>
-        <div class="xd-margin xd-danger"><code>div.xd-margin</code></div>
-        <span class="xd-margin xd-primary"><code>span.xd-margin</code></span>
-        <div class="xd-margin-t xd-danger"><code>div.xd-margin-t</code></div>
-        <span class="xd-margin-s xd-primary"><code>span.xd-margin-s</code></span>
-        <div class="xd-margin-m xd-danger"><code>div.xd-margin-m</code></div>
-        <span class="xd-margin-l xd-primary"><code>span.xd-margin-l</code></span>
+        <h3 class="xd-section-l">.xd-section</h3>
+        Lorem Ipsum
+        <div class="xd-section-t xd-danger"><code>div.xd-section-t</code></div>
+        Lorem Ipsum
+        <div class="xd-section-s xd-danger"><code>div.xd-section-s</code></div>
+        Lorem Ipsum
+        <div class="xd-section-m xd-danger"><code>div.xd-section-m</code></div>
+        Lorem Ipsum
+        <div class="xd-section-l xd-danger"><code>div.xd-section-l</code></div>
+        Lorem Ipsum
+
       </div>
+      <div>
+        <h3 class="xd-section-l">.xd-section</h3>
+        <div class="xd-section-t xd-danger"><code>div.xd-section-t</code></div>
+        <div class="xd-section-s xd-danger"><code>div.xd-section-s</code></div>
+        <div class="xd-section-m xd-danger"><code>div.xd-section-m</code></div>
+        <div class="xd-section-l xd-danger"><code>div.xd-section-l</code></div>
+
+      </div>
+
     </div>
   </article>
 
@@ -779,8 +577,8 @@
     </div>
     <div>
       <small class="xd-box">text required</small>
-      <input class="xd-input" type="text" required placeholder="required invalid" />
-
+      <input class="xd-input xd-border-l" type="text" required placeholder="required invalid" />
+      <input class="xd-input xd-border-l " type="text"  placeholder="required invalid" />
     </div>
 
     <div>
