@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>xd.css</title>
+  <link rel="stylesheet" href="xd.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    html {
+      line-height: 1.15;
+      -webkit-text-size-adjust: 100%
+    }
+
+    body {
+      margin: 0
+    }
+
+    main {
+      display: block
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: .67em 0
+    }
+
+    hr {
+      box-sizing: content-box;
+      height: 0;
+      overflow: visible
+    }
+
+    pre {
+      font-family: monospace, monospace;
+      font-size: 1em
+    }
+
+    a {
+      background-color: transparent
+    }
+
+    abbr[title] {
+      border-bottom: none;
+      text-decoration: underline;
+      text-decoration: underline dotted
+    }
+
+    b,
+    strong {
+      font-weight: bolder
+    }
+
+    code,
+    kbd,
+    samp {
+      font-family: monospace, monospace;
+      font-size: 1em
+    }
+
+    small {
+      font-size: 80%
+    }
+
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline
+    }
+
+    sub {
+      bottom: -.25em
+    }
+
+    sup {
+      top: -.5em
+    }
+
+    img {
+      border-style: none
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: 100%;
+      line-height: 1.15;
+      margin: 0
+    }
+
+    button,
+    input {
+      overflow: visible
+    }
+
+    button,
+    select {
+      text-transform: none
+    }
+
+    [type=button],
+    [type=reset],
+    [type=submit],
+    button {
+      -webkit-appearance: button
+    }
+
+    [type=button]::-moz-focus-inner,
+    [type=reset]::-moz-focus-inner,
+    [type=submit]::-moz-focus-inner,
+    button::-moz-focus-inner {
+      border-style: none;
+      padding: 0
+    }
+
+    [type=button]:-moz-focusring,
+    [type=reset]:-moz-focusring,
+    [type=submit]:-moz-focusring,
+    button:-moz-focusring {
+      outline: 1px dotted ButtonText
+    }
+
+    fieldset {
+      padding: .35em .75em .625em
+    }
+
+    legend {
+      box-sizing: border-box;
+      color: inherit;
+      display: table;
+      max-width: 100%;
+      padding: 0;
+      white-space: normal
+    }
+
+    progress {
+      vertical-align: baseline
+    }
+
+    textarea {
+      overflow: auto
+    }
+
+    [type=checkbox],
+    [type=radio] {
+      box-sizing: border-box;
+      padding: 0
+    }
+
+    [type=number]::-webkit-inner-spin-button,
+    [type=number]::-webkit-outer-spin-button {
+      height: auto
+    }
+
+    [type=search] {
+      -webkit-appearance: textfield;
+      outline-offset: -2px
+    }
+
+    [type=search]::-webkit-search-decoration {
+      -webkit-appearance: none
+    }
+
+    ::-webkit-file-upload-button {
+      -webkit-appearance: button;
+      font: inherit
+    }
+
+    details {
+      display: block
+    }
+
+    summary {
+      display: list-item
+    }
+
+    template {
+      display: none
+    }
+
+    [hidden] {
+      display: none
+    }
+
+    /*002*/
+    html {
+      box-sizing: border-box;
+      height: 100%;
+      position: relative;
+      overflow-x: auto;
+      background-repeat: no-repeat;
+      background-color: var(--xdbackground);
+      font-size: 14px;
+      line-height: 1.250em;
+      font-family: "Open Sans", Arial, sans-serif;
+      color: var(--xddark) !important;
+      text-rendering: optimizeSpeed;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit
+    }
+
+
+    /*003*/
+    body {
+      min-height: 100%;
+      position: relative;
+    }
+
+    ul {
+      padding-inline-start: 32px
+    }
+
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    /*custom code{
+    color: #d63384;
+    word-wrap: break-word;}  */
+  </style>
+</head>
+
+<body>
+<nav style="position: sticky; top: 0px;" class="xd-hide-print" >
+  <div class="xd-container xd-gap-m xd-padding-l xd-light "  >
+    <a class="xd-button xd-border  xd-light" href="#building-blocks">Building Blocks</a>
+    <a class="xd-button xd-border  xd-light" href="#containers">Containers</a>
+    <div class="xd-padding">Examples:</div>
+
+    <a class="xd-button xd-border  xd-light" href="#grid-examples">Grid</a>
+    <a class="xd-button xd-border  xd-light" href="#table">Table</a>
+
+    <a class="xd-button xd-border  xd-light" href="#boxes">Boxes</a>
+    <a class="xd-button xd-border  xd-light" href="#mixstyles">Mix</a>
+
+    <div class="xd-padding">Test:</div>
+    <a class="xd-button xd-border  xd-light" href="#typography">Typography</a>
+    <a class="xd-button xd-border  xd-light" href="#inputs">Inputs</a>
+    <a class="xd-button xd-border  xd-light" href="#nonstandard">Other</a>
+    <a class="xd-button xd-border  xd-light" href="#gridgallery">Gallery</a>
+    <div class="xd-padding">Theme:</div>
+    <a href="#" class="xd-button xd-border" onclick="document.documentElement.setAttribute('data-theme', 'dark')"> Night</a>
+        <a href="#" class="xd-button xd-border" onclick="document.documentElement.setAttribute('data-theme', 'light')">💡Day</a>
+  </div>
+</nav>
+
+<div id="top" class=" hide" role="document">
+
+  <article class="xd-content">
+    <h1 class="xd-center">
+      <span class="xd-txt-l">😆 xd.css v0.3</span>
+    </h1>
+    <h3 class="xd-center">a 100 definitions micro framework</h3>
+
+    <h2 class="xd-section-s">Why ?</h2>
+    <ul >
+      <li>
+        easy for beginers, powerfull for profesionals, only 100 definitions, building blocks for any design system
+      </li>
+      <li>
+        dead simple html semantics, mobile, grid, printing support out of box
+      </li>
+      <li>
+        build for code generated content React, Vue, Angular, .NET, php
+      </li>
+      <li>
+        safe to include in your styles, friendly to other frameworks (just remove definitions 001 002 003 004)
+      </li>
+      <li>Support for night mode
+      </li>
+    </ul>
+  </article>
+
+
+
+  <article id="building-blocks" class="xd-light xd-padding-l xd-section-m  xd-round-l xd-content">
+    <h2 class="xd-section-s xd-center">Building blocks</h2>
+
+    <h3 class="xd-section-m">Containers</h2>
+    <div class="xd-grid-5 xd-center xd-margin xd-gap-l ">
+      <div class="xd-border">
+        <code class="xd-box">.xd-content</code>
+        <div>(-t -s -m -l)</div>
+      </div>
+      <div class="xd-border">
+        <code class="xd-box">.xd-responsive</code>
+      </div>
+      <div class="xd-border">
+        <code class="xd-box">.xd-container</code> <small>Button container</small>
+      </div>
+    </div>
+    <h3 class="xd-section-m">Basic elements</h3>
+    <div class="xd-grid-5 xd-center xd-margin xd-gap-l ">
+
+      <div class="xd-border">
+        <code class="xd-box">xd-box</code>
+        (-t -s -m -l)
+      </div>
+      <div class="xd-border"> 
+        <code class="xd-box">.xd-input</code></div>
+      <div class="xd-border">
+        <code class="xd-box">.xd-button</code>
+        <div>(-t -s -m -l)</div>
+      </div>
+      <div class="xd-border">
+        <code class="xd-box">.xd-round</code>
+        <div>(-t -s -m -l)</div>
+      </div>
+      <div class="xd-border">
+        <code class="xd-box">.xd-border</code>
+        <div>(-t -s -m -l)</div>
+      </div>
+
+      <div class="xd-border">
+        <code class="xd-box">.xd-margin</code>
+        <div>(-t -s -m -l)</div>
+      </div>
+      <div class="xd-border">
+        <code class="xd-box">.xd-padding</code>
+        <div>(-t -s -m -l)</div>
+      </div>
+      <div class="xd-border">
+        <code class="xd-box">.xd-section</code>
+        <div>(-t -s -m -l)</div>
+      </div>
+      <div class="xd-border">
+        <code class="xd-box">.xd-txt</code>
+        <div class="xd-txt-s">(-t -s -m -l)</div>
+        <div class="xd-txt-s">Text sizes</div>
+        
+      </div>
+    </div>
+
+    <h3  class="xd-section-m">Colors - backgrounds</h3>
+    <div class="xd-grid-5 xd-margin xd-center xd-gap-l ">
+      <div class="xd-brand xd-box">.xd-brand</div>
+      <div class="xd-primary xd-box">.xd-primary</div>
+      <div class="xd-secondary xd-box">.xd-secondary</div>
+      <div class="xd-success xd-box">.xd-success</div>
+      <div class="xd-danger xd-box">.xd-danger</div>
+      <div class="xd-warning xd-box">.xd-warning</div>
+      <div class="xd-info xd-box">.xd-info</div>
+      <div class="xd-light xd-box">.xd-light</div>
+      <div class="xd-medium xd-box">.xd-medium</div>
+      <div class="xd-dark xd-box">.xd-dark</div>
+    </div>
+    <h3 class="xd-section-m">Colors - text</h3>
+    <div class="xd-grid-5 xd-margin xd-center xd-gap-l m">
+      <div class="xd-txt-brand">.xd-txt-brand</div>
+      <div class="xd-txt-primary">.xd-txt-primary</div>
+      <div class="xd-txt-secondary">.xd-txt-secondary</div>
+      <div class="xd-txt-success">.xd-txt-success</div>
+      <div class="xd-txt-danger">.xd-txt-danger</div>
+      <div class="xd-txt-warning">.xd-txt-warning</div>
+      <div class="xd-txt-info">.xd-txt-info</div>
+      <div class="xd-txt-light">.xd-txt-light</div>
+      <div class="xd-txt-medium">.xd-txt-medium</div>
+      <div class="xd-txt-dark">.xd-txt-dark</div>
+    </div>
+    <h3 class="xd-section-m">Border - colors</h3>
+    <div class="xd-grid-5 xd-margin xd-center xd-gap-l ">
+      <div class="xd-border-brand"><code class="xd-box">.xd-border-brand</code></div>
+      <div class="xd-border-primary"><code class="xd-box">.xd-border-primary</code></div>
+      <div class="xd-border-secondary "><code class="xd-box">.xd-border-secondary</code></div>
+      <div class="xd-border-success "><code class="xd-box">.xd-border-success</code></div>
+      <div class="xd-border-danger"><code class="xd-box">.xd-border-danger</code></div>
+      <div class="xd-border-warning"><code class="xd-box">.xd-border-warning</code></div>
+      <div class="xd-border-info"><code class="xd-box">.xd-border-info</code></div>
+      <div class="xd-border-light"><code class="xd-box">.xd-border-light</code></div>
+      <div class="xd-border-medium"><code class="xd-box">.xd-border-medium</code></div>
+      <div class="xd-border-dark"><code class="xd-box">.xd-border-dark</code> </div>
+      <div class="xd-border"><code class="xd-box">.xd-border</code></div>
+    </div>
+
+    <h3 class="xd-section-m">Helpers</h3>
+
+    <div class="xd-grid-5 xd-margin xd-gap-l">
+      <div class="xd-border"><code class="xd-box xd-center">.xd-center</code></div>
+      <div class="xd-border"><code class="xd-box xd-left">.xd-left</code></div>
+      <div class="xd-border"><code class="xd-box xd-right">.xd-right</code></div>
+      <div class="xd-border"><code class="xd-box">.xd-nw</code> <div class="xd-nw">realy long text lorem ipsum lorem ipsum</div></div>
+      <div class="xd-border"><code class="xd-box xd-strong">.xd-strong</code></div>
+      <div class="xd-border"><code class="xd-box">.xd-image</code></div>
+      
+</div>
+<h3 class="xd-section-m">Helpers - visibility</h3>
+<div class="xd-grid-5 xd-margin xd-gap-l xd-center">
+      <div class="xd-border"><code class="xd-box">.xd-hide-desktop</code> <div class="xd-hide-desktop xd-strong">TEST TEXT</div></div>
+      <div class="xd-border "><code class="xd-box">.xd-hide-mobile</code> <div class="xd-hide-mobile xd-strong">TEST TEXT</div></div>
+      <div class="xd-border "><code class="xd-box">.xd-hide-print</code> <div class="xd-hide-print xd-strong">TEST TEXT</div></div>
+    </div>
+
+    <h3 class="xd-section-m">Grid Desktop only</h3>
+    <div class="xd-grid-5 xd-margin xd-center xd-gap-l ">
+      <div class="xd-border"><code class="xd-box">.xd-grid-2</code></div>
+      <div class="xd-border"><code class="xd-box">.xd-grid-3</code></div>
+      <div class="xd-border"><code class="xd-box">.xd-grid-4</code></div>
+      <div class="xd-border">...</div>
+      <div class="xd-border"><code class="xd-box">.xd-grid-12</code></div>
+    </div>
+
+    <h3 class="xd-section-m">Grid Mobile only</h3>
+    <div class="xd-grid-5 xd-margin xd-center xd-gap-l ">
+      <div class="xd-border"><code class="xd-box">.xd-grid-mobile-2</code></div>
+      <div class="xd-border"><code class="xd-box">.xd-grid-mobile-3</code></div>
+      <div class="xd-border"><code class="xd-box">.xd-grid-mobile-4</code></div>
+      <div class="xd-border">...</div>
+      <div class="xd-border"><code class="xd-box">.xd-grid-mobile-6</code></div>
+    </div>
+
+    <h3 class="xd-section-m">Tables</h3>
+    <div class="xd-grid-5 xd-margin xd-center xd-gap-l ">
+      <div class="xd-border"><code class="xd-box">.xd-table</code></div>
+    </div>
+
+ 
+
+    <h3 class="xd-section-m">Unicode safe icons</h3>
+    <div class="xd-grid-12 xd-margin xd-center xd-gap-l xd-txt-m">
+      <div>↗️</div>
+      <div>⭕</div>
+      <div>🔵</div>
+      <div>🔴</div>
+      <div>⚪</div>
+      <div>⚫</div>
+      <div>🟣</div>
+      <div>🟢</div>
+    </div>
+
+  </article>
+
+
+  <article id="containers" class="xd-section-m">
+    <h2 class="xd-section-s xd-center">Containers</h2>
+    <div class="xd-content-t  xd-secondary xd-center ">
+      <div class="xd-txt-l xd-padding-m"><code>.xd-content-t</code> 540px</div>
+    </div>
+    <br />
+    <div class="xd-content-s xd-secondary xd-center">
+      <div class="xd-txt-l xd-padding-m"><code>.xd-content-s</code> 960px</div>
+
+    </div>
+    <br />
+    <div class="xd-content-m  xd-secondary xd-center ">
+      <div class="xd-txt-l xd-padding-m"><code>.xd-content-m</code> 1140px</div>
+    </div> <br />
+    <div class="xd-content-l xd-secondary xd-center ">
+
+      <div class="xd-txt-l xd-padding-m"><code>.xd-content-l</code> 1320px</div>
+    </div>   <br />
+  </article>
+
+  <!-- GRID EXAMPLES -->
+
+  <article id="grid-examples" class="xd-light xd-padding-l xd-section-m  xd-round-l xd-content">
+    <h2 class="xd-section-s xd-center">Grid examples</h2>
+
+    <h3 class="xd-section-m">12 columns desktop, 3 columns mobile, no gap </h3>
+    <code class="xd-box-m">.xd-grid-9 .xd-grid-mobile-3 .xd-center</code>
+    <div class="xd-grid-9 xd-grid-mobile-3   xd-center">
+      <div class="xd-border xd-box">1</div>
+      <div class="xd-border xd-box">2</div>
+      <div class="xd-border xd-box" style="grid-column: span 2;"><div>3</div> <code>style="grid-column:span 2"</code></div>
+      <div class="xd-border xd-box">4</div>
+      <div class="xd-border xd-box">5</div>
+      <div class="xd-border xd-box">6</div>
+      <div class="xd-border xd-box">7</div>
+      <div class="xd-border xd-box">8</div>
+      <div class="xd-border xd-box">9</div>
+      <div class="xd-border xd-box">10</div>
+      <div class="xd-border xd-box">11</div>
+      <div class="xd-border xd-box">12</div>
+      <div class="xd-border  xd-box">13</div>
+      <div class="xd-border xd-box">14</div>
+      <div class="xd-border xd-box">15</div>
+      <div class="xd-border xd-box">16</div>
+      <div class="xd-border xd-box">17</div>
+      <div class="xd-border xd-box">18</div>
+      <div class="xd-border xd-box">19</div>
+      <div class="xd-border xd-box">20</div>
+      <div class="xd-border xd-box">21</div>
+      <div class="xd-border xd-box">22</div>
+      <div class="xd-border xd-box">23</div>
+      <div class="xd-border xd-box">24</div>
+    </div>
+
+    <h3 class="xd-section-m">4 columns desktop, large gap</h3>
+      <code class="xd-box-m">.xd-grid-4  .xd-gap-l .xd-center</code>
+      <div class="xd-grid-4 xd-gap-l xd-center">
+        <div class="xd-border">1</div>
+        <div class="xd-border">2</div>
+        <div class="xd-border">3</div>
+        <div class="xd-border">4</div>
+        <div class="xd-border">5</div>
+        <div class="xd-border">6</div>
+        <div class="xd-border">7</div>
+        <div class="xd-border">8</div>
+      </div>
+
+      <h3 class="xd-section-m">4 columns desktop, medium gap</h3>
+      <code class="xd-box-m">.xd-grid-4  .xd-gap-m .xd-center</code>
+      <div class="xd-grid-4 xd-gap-m xd-center">
+        <div class="xd-border">1</div>
+        <div class="xd-border">2</div>
+        <div class="xd-border">3</div>
+        <div class="xd-border">4</div>
+        <div class="xd-border">5</div>
+        <div class="xd-border">6</div>
+        <div class="xd-border">7</div>
+        <div class="xd-border">8</div>
+      </div>
+
+      <h3 class="xd-section-m">4 columns desktop, small gap </h3>
+      <code class="xd-box-m">.xd-grid-4  .xd-gap-s .xd-center</code>
+      <div class="xd-grid-4  xd-gap-s xd-center">
+        <div class="xd-border">1</div>
+        <div class="xd-border">2</div>
+        <div class="xd-border">3</div>
+        <div class="xd-border">4</div>
+        <div class="xd-border">5</div>
+        <div class="xd-border">6</div>
+        <div class="xd-border">7</div>
+        <div class="xd-border">8</div>
+      </div>
+
+      <h3 class="xd-section-m">6 columns desktop, 2 columns mobile, tiny gap</h3>
+      <code class="xd-box-m">.xd-grid-6 .xd-grid-mobile-2 .xd-gap-t .xd-center</code>
+      <div class="xd-grid-6 xd-grid-mobile-2 xd-gap-t xd-center">
+        <div class="xd-border">1</div>
+        <div class="xd-border">2</div>
+        <div class="xd-border">3</div>
+        <div class="xd-border">4</div>
+        <div class="xd-border">5</div>
+        <div class="xd-border">6</div>
+        <div class="xd-border">7</div>
+        <div class="xd-border">8</div>
+      </div>
+
+  </article>
+
+
+
+  <article id="table" class="xd-light xd-padding-l xd-section-m  xd-round-l xd-content">
+
+
+    <h2 class="xd-section-s xd-center">TEST - Table</h2>
+    <code class="xd-box-m">.xd-table .xd-responsive</code>
+  <div class="xd-responsive">
+  <table class="xd-table xd-light">
+    <thead>
+      <tr>
+        <th >#</th>
+        <th >image</th>
+        <th >long</th>
+        <th >tag</th>
+        <th >number</th>
+        <th class="xd-nw" style="max-width:40px" title="Column5 truncate">text</th>
+        <th >text</th>
+        <th >text</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="test">
+        <td><input type="checkbox" class="xd-input"/> </td>
+        <td style="padding:0px!important;"><img src="http://placekitten.com/27/27" alt="Image alt text" /></td>
+        <td class="xd-nw" style="max-width:300px">Crane Arm Outside, New Wide with Pin Hole at Mid-Point</td>
+        <td class="xd-nw">
+          <span class="xd-padding-t xd-border-brand xd-round-t xd-txt-t">tag</span>
+          <span class="xd-padding-t xd-border-brand xd-round-t xd-txt-t">tag</span>
+        </td>
+        <td class="xd-right">234234.32</td>
+        <td class="xd-nw"  style="max-width:40px">Hello World</td>
+        <td class="xd-nw">Hook, Fabuland Tow Hook - Arm, 2 x 4 Base of two</td>
+        <td class="xd-nw">Hook, Fabuland Tow Hook - Arm, 2 x 4 Base of two</td>
+      </tr>
+    </tbody>
+  </table></div>
+  </article>
+
+  <article id="boxes" class="xd-light xd-padding-l xd-section-m  xd-round-l xd-content">
+
+    <h2 class="xd-section-s xd-center">box-model test</h2>
+  
+    <div class="xd-grid-3  xd-center xd-gap-l">
+      <div>
+        <h3 class="xd-section-l">.xd-box</h3>
+        <div class="xd-box xd-danger"><code>div.xd-box</code></div>
+        <span class="xd-box xd-primary"><code>span.xd-box</code></span>
+        <div class="xd-box-t xd-danger"><code>div.xd-box-t</code></div>
+        <span class="xd-box-s xd-primary"><code>span.xd-box-s</code></span>
+        <div class="xd-box-m xd-danger"><code>div.xd-box-m</code></div>
+        <span class="xd-box-l xd-primary"><code>span.xd-box-l</code></span>
+      </div>
+      <div>
+        <h3 class="xd-section-l">.xd-padding</h3>
+        <div>
+          <div class="xd-padding xd-danger"><code>div.xd-padding</code></div>
+        </div>
+        <div><span class="xd-padding xd-primary"><code>span.xd-padding</code></span></div>
+        <div>
+          <div class="xd-padding-t xd-danger"><code>div.xd-padding-t</code></div>
+        </div>
+        <div><span class="xd-padding-s xd-primary"><code>span.xd-padding-s</code></span></div>
+        <div>
+          <div class="xd-padding-m xd-danger"><code>div.xd-padding-m</code></div>
+        </div>
+        <div><span class="xd-padding-l xd-primary"><code>span.xd-padding-l</code></span></div>
+      </div>
+  
+      <div>
+        <h3 class="xd-section-l">.xd-margin</h3>
+        <div class="xd-margin xd-danger"><code>div.xd-margin</code></div>
+        <span class="xd-margin xd-primary"><code>span.xd-margin</code></span>
+        <div class="xd-margin-t xd-danger"><code>div.xd-margin-t</code></div>
+        <span class="xd-margin-s xd-primary"><code>span.xd-margin-s</code></span>
+        <div class="xd-margin-m xd-danger"><code>div.xd-margin-m</code></div>
+        <span class="xd-margin-l xd-primary"><code>span.xd-margin-l</code></span>
+      </div>
+    </div>
+  </article>
+
+  <article id="mixstyles" class="xd-light xd-padding-l xd-section-m  xd-round-l xd-content">
+    <h2 class="xd-section-s xd-center">Mix styles</h2>
+
+  <h3 class="xd-section-m">Mix border color and width</h3>
+  <div class="xd-grid-4 xd-margin xd-center xd-gap-l ">
+    <div class="xd-border-brand xd-border-t"><code class="xd-box">.xd-border-t</code></div>
+    <div class="xd-border-brand xd-border-s"><code class="xd-box">.xd-border-s</code></div>
+    <div class="xd-border-brand xd-border-m"><code class="xd-box">.xd-border-m</code></div>
+    <div class="xd-border-brand xd-border-l"><code class="xd-box">.xd-border-l</code></div>
+  </div>
+
+  <h3 class="xd-section-m"></h3>
+  <div class="xd-grid-4 xd-margin xd-center xd-gap-l ">
+    <div class="xd-border-brand xd-border-l xd-box-t"><code class=" xd-warning">.xd-box-t</code></div>
+    <div class="xd-border-brand xd-border-l xd-box-s"><code class="xd-warning">.xd-box-s</code></div>
+    <div class="xd-border-brand xd-border-l xd-box-m"><code class=" xd-warning">.xd-box-m</code></div>
+    <div class="xd-border-brand xd-border-l xd-box-l"><code class="xd-warning">.xd-box-l</code></div>
+  </div>
+    <h3 class="xd-section-m">Mix Input and size</h3>
+  
+    <div class="xd-grid-5 xd-gap-s ">
+      <div>
+        <code>.xd-input</code>
+        <input class="xd-input" type="text" placeholder="Text Input" />
+      </div>
+      <div>
+        <code>.xd-input .xd-txt-t</code>
+        <input class="xd-input xd-txt-t" type="text" placeholder="Text Input" />
+      </div>
+      <div>
+        <code>xd-input .xd-txt-s</code>
+        <input class="xd-input xd-txt-s" type="text" placeholder="Text Input" />
+      </div>
+      <div>
+        <code>.xd-input .xd-txt-m</code>
+        <input class="xd-input xd-txt-m" type="text" placeholder="Text Input" />
+      </div>
+      <div>
+        <code>.xd-input .xd-txt-l</code>
+        <input class="xd-input xd-txt-l" type="text" placeholder="Text Input" />
+      </div>
+    </div>
+
+</article>
+
+  <!-- TYPOGRAPHY-->
+
+  <article id="typography" class="xd-light xd-padding-l xd-section-m  xd-round-l xd-content">
+    <h2 class="xd-section-s xd-center">Typography</h2>
+    <div>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <p><a href="#!">This is a text link</a>.</p>
+      <p>
+        <strong>Strong is used to indicate strong importance.</strong>
+      </p>
+      <p><em>This text has added emphasis.</em></p>
+      <p>
+        The <b>b element</b> is stylistically different text from normal
+        text, without any special importance.
+      </p>
+      <p>
+        The <i>i element</i> is text that is offset from the normal
+        text.
+      </p>
+      <p>
+        The <u>u element</u> is text with an unarticulated, though
+        explicitly rendered, non-textual annotation.
+      </p>
+      <p>
+        <del>This text is deleted</del> and
+        <ins>This text is inserted</ins>.
+      </p>
+      <p><s>This text has a strikethrough</s>.</p>
+      <p>Superscript<sup>®</sup>.</p>
+      <p>Subscript for things like H<sub>2</sub>O.</p>
+      <p>
+        <small>This small text is small for for fine print, etc.</small>
+      </p>
+      <p>
+        Abbreviation:
+        <abbr title="HyperText Markup Language">HTML</abbr>
+      </p>
+      <p>
+        <q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation.</q>
+      </p>
+      <p><cite>This is a citation.</cite></p>
+      <p>The <dfn>dfn element</dfn> indicates a definition.</p>
+      <p>The <mark>mark element</mark> indicates a highlight.</p>
+      <p>
+        The <var>variable element</var>, such as <var>x</var> =
+        <var>y</var>.
+      </p>
+      <p>
+        The time element:
+        <time datetime="2013-04-06T12:32+00:00">2 weeks ago</time>
+      </p>
+    </div>
+  </article>
+
+
+
+
+
+<article id="inputs" class="xd-padding-l xd-border xd-border-l xd-section-m  xd-round-l xd-content">
+
+  <h2 class="xd-section-s xd-center">Test - input</h2>
+  <code class="xd-box-m">.xd-input .xd-button</code>
+
+  <form class="xd-grid-4 xd-gap-t s">
+    <div><small class="xd-box">text</small>
+      <input class="xd-input" type="text" placeholder="Text Input" />
+    </div>   <div><small class="xd-box">search</small>
+    <input class="xd-input" type="search" placeholder="Text Input" />
+  </div>
+
+    <div>
+      <small class="xd-box">submit</small>
+      <button type="submit" class="xd-button" class="xd-button">
+        submit
+      </button>
+    </div>    <div><small class="xd-box">reset</small>
+      <button type="reset" class="xd-button" class="xd-button">
+        reset
+      </button></div>  
+      <div><small class="xd-box">button</small>
+      <button type="button" class="xd-button" class="xd-button">
+        button
+      </button>
+    </div>
+      <div >
+        <small class="xd-box">checkbox</small>
+        <input class="xd-input" type="checkbox" checked="checked" /> rew
+        qrqwe rwqe r
+      </div>
+    <div><small class="xd-box">number</small>
+      <input class="xd-input" type="number" placeholder="number" />
+      </div>
+      <div><small class="xd-box">date</small>
+      <input class="xd-input" type="date" placeholder="date" /></div>
+      <div><small class="xd-box">file</small><input class="xd-input" type="file" placeholder="date" />
+    </div>
+    <div>
+      <small class="xd-box">text required</small>
+      <input class="xd-input" type="text" required placeholder="required invalid" />
+
+    </div>
+
+    <div>
+      <small class="xd-box">text required</small>
+      <input class="xd-input" type="text" required placeholder="required valid" value="required valid" />
+
+    </div>
+    <div>
+      <small class="xd-box">text disabled</small>
+      <input class="xd-input" type="text" disabled placeholder="disabled" />
+
+    </div>
+    <div>
+      <small class="xd-box">select</small>
+      <select id="select" class="xd-input">
+        <optgroup label="Option Group">
+          <option>Select</option>
+          <option>Option Two</option>
+          <option>Option Three</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <div>
+      <small class="xd-box">Color input</small>
+      <input type="color" class="xd-input xd-box" value="#000000" />
+    </div>
+    <div>
+      <small class="xd-box">Number input</small>
+      <input type="number" class="xd-input xd-box" id="in" min="0" max="10" value="5" />
+    </div>
+    <div>
+      <small class="xd-box">Range input</small>
+      <input type="range" class="xd-input xd-box" value="10" />
+    </div>
+    <div>
+      <small class="xd-box">Date input</small>
+      <input type="date" class="xd-input xd-box" value="1970-01-01" />
+    </div>
+    <div>
+      <small class="xd-box">Month input</small>
+      <input type="month" class="xd-input xd-box" value="1970-01" />
+    </div>
+    <div>
+      <small class="xd-box">Week input</small>
+      <input type="week" class="xd-input xd-box" value="1970-W01" />
+    </div>
+    <div>
+      <small class="xd-box">Datetime input</small>
+      <input type="datetime" class="xd-input" id="idt" value="1970-01-01T00:00:00Z" />
+    </div>
+    <div>
+      <small class="xd-box">Datetime-local input</small>
+      <input type="datetime-local" class="xd-input" id="idtl" value="1970-01-01T00:00" />
+    </div>
+    <div ><small class="xd-box">Textarea</small><textarea id="textarea" rows="8" class="xd-input xd-box" placeholder="Enter your message here"></textarea></div>
+      
+  </form>
+</article>
+
+
+<article id="nonstandard" class="xd-border xd-border-l xd-section-m  xd-round-l xd-content">
+
+  <h2 class="xd-section-s xd-center">Test - audio video </h2>
+<div class="xd-grid-2 xd-gap-m xd-center">
+  <div class="xd-border">
+    <code class="xd-box">&lt;audio controls=&quot;&quot;&gt;audio&lt;/audio&gt;</code> <audio controls="">audio</audio></div>
+  <div class="xd-border"> 
+    <code class="xd-box">&lt;video controls=&quot;&quot;&gt;video&lt;/video&gt;</code><video controls="">video</video></div>
+  <div class="xd-border">
+    <code class="xd-box"> &lt;meter min=&quot;0&quot; max=&quot;100&quot; low=&quot;33&quot; high=&quot;66&quot; optimum=&quot;80&quot; value=&quot;50&quot;&gt;</code>
+    <meter min="0" max="100" low="33" high="66" optimum="80" value="50"></div>
+  <div class="xd-border">
+    <code class="xd-box">&lt;progress  max=&quot;100&quot; value=&quot;70&quot;&gt; 70% &lt;/progress&gt;</code>
+    <progress  max="100" value="70"> 70% </progress>
+  </div>
+  <div class="xd-border"> 
+    
+    <svg width="100px" height="100px">
+      <circle cx="100" cy="100" r="100" fill="#1fa3ec"></circle>
+    </svg></div>
+  <div> <img src="http://placekitten.com/480/480" alt="Image alt text" style="aspect-ratio: 16 / 9; max-width: 300px; object-fit: cover;" /></div>
+  <div class="xd-border">
+    <code class="xd-box">&lt;iframe src=&quot;index.html&quot; height=&quot;300&quot;&gt;&lt;/iframe&gt;</code><iframe src="index.html" height="300"></iframe></div>
+</div>
+</article>
+
+<article id="gridgallery" class="xd-light xd-padding-l xd-section-m  xd-round-l xd-content">
+
+  <h2 class="xd-section-s xd-center">Test - Grid Printing</h2>
+  <code class="xd-box-m">.xd-grid-6 .xd-grid-mobile-2 .xd-gap-l .xd-center</code>
+  <div class="xd-grid-6 xd-grid-mobile-2 xd-gap-l xd-center">
+    <div style="grid-column: span 2;"><img src="http://placekitten.com/490/480" class="xd-image" alt="Image alt text" /></div>
+    <div style="grid-column: span 2;"><img src="http://placekitten.com/491/480" class="xd-image" alt="Image alt text" /></div>
+    <div><img src="http://placekitten.com/492/480" class="xd-image" alt="Image alt text" /></div>
+    <div><img src="http://placekitten.com/483/480" class="xd-image" alt="Image alt text" /></div>
+    <div><img src="http://placekitten.com/485/480" class="xd-image" alt="Image alt text" /></div>
+    <div><img src="http://placekitten.com/485/480" class="xd-image" alt="Image alt text" /></div>
+    <div><img src="http://placekitten.com/486/480" class="xd-image" alt="Image alt text" /></div>
+    <div><img src="http://placekitten.com/488/480" class="xd-image" alt="Image alt text" /></div>
+    <div><img src="http://placekitten.com/473/480" class="xd-image" alt="Image alt text" /></div>
+    <div><img src="http://placekitten.com/423/480" class="xd-image" alt="Image alt text" /></div>
+    <div><img src="http://placekitten.com/413/480" class="xd-image" alt="Image alt text" /></div>
+    <div><img src="http://placekitten.com/463/480" class="xd-image" alt="Image alt text" /></div>
+    <div><img src="http://placekitten.com/483/480" class="xd-image" alt="Image alt text" /></div>
+  </div>
+</article>
+<footer class="xd-center xd-padding-l xd-content">xd.css</footer>
+  <script>
+    //  document.head.insertAdjacentHTML("beforeend", `<style>[class]:hover:not(.hide){  box-shadow:inset 0px 0px 0px 2px rgba(0,0,0,0.25); }</style>`);
+    // document.head.insertAdjacentHTML("beforeend", `<style>[class]:before  {font-size:8px; height:14px ;margin:0!important; padding:0!important;display:block; content: attr(class); color:white ;  background:rgba(0,0,0,0.25) }</style>`);
+ 
+
+    //test data
+    for (let step = 0; step < 10; step++) {
+
+      var elem = document.querySelector('#test');
+      
+      // Create a copy of it
+      var clone = elem.cloneNode(true);
+      clone.id = '';
+      
+      // Inject it into the DOM
+      elem.after(clone);
+      
+      }
+
+  </script>
+</div>
+</body>
+</html>
