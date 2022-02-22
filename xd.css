@@ -116,7 +116,7 @@ html[data-theme='dark'] {
 /*022*/.xd-strong,b,strong {font-weight: 600}
 /*023*/.xd-center {  text-align: center;}
 /*024*/.xd-left { text-align:left!important } 
-/*025*/.xd-right { text-align:right!important } 
+/*025*/.xd-right,  input[type="number"].xd-input { text-align:right!important } 
 /*026*/.xd-nw {  white-space: nowrap;text-overflow: ellipsis; overflow: hidden;}
 /*027*/.xd-block { display:block; width:100% }
 
@@ -167,7 +167,8 @@ input.xd-input,select.xd-input,textarea.xd-input, .xd-border { border:1px solid;
         input[type="date"].xd-input,
         input[type="time"].xd-input,
         input[type="week"].xd-input
-        input[type="search"].xd-input {-webkit-border-radius:0px; -webkit-appearance: none;/*IOS remove default border radius, webkit-appearance is not enough*/}
+        input[type="search"].xd-input {  
+          -moz-appearance: none;  appearance: none;-webkit-border-radius:0px; -webkit-appearance: none!important;/*IOS remove default border radius, webkit-appearance is not enough*/}
 
 
 /*053*/ input[type="file"].xd-input{padding:1px !important;  } 
