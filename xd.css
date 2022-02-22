@@ -160,8 +160,14 @@ input.xd-input,select.xd-input,textarea.xd-input, .xd-border { border:1px solid;
 /*051*/.xd-content-l   {display:block; max-width:1320px ;margin-left:auto; margin-right:auto;} 
 /*052*/.xd-responsive  {display:block; overflow-x:auto; } 
 
-/*053*/input[type="file"].xd-input{padding:1px !important; -webkit-appearance: none; -webkit-border-radius:0px; /*remove default border radius for ios*/} 
-/*054*/input[type="date"].xd-input,input[type="time"].xd-input,input[type="week"].xd-input,input[type="datetime-local"].xd-input{padding:2px !important;  -webkit-border-radius:0px;/*remove default border radius for ios*/} 
+/*054*/ input.xd-input {-webkit-border-radius:0px;}
+
+
+/*053*/ input[type="file"].xd-input{padding:1px !important; -webkit-appearance: none; -webkit-border-radius:0px; /*remove default border radius for ios*/} 
+/*054*/ input[type="date"].xd-input,
+        input[type="time"].xd-input,
+        input[type="week"].xd-input,
+        input[type="datetime-local"].xd-input{padding:2px !important;  /*remove default border radius for ios*/} 
 /*055*/select.xd-input {border-right:solid 15px var(--xdmedium) !important;padding:1px; -webkit-appearance: none;}
 /*056*/input[type='checkbox'].xd-input { transform: scale(1.25)} 
 input.xd-input:required ,textarea.xd-input:required, select.xd-input:required  {box-shadow: inset 0px 0px 0px 2px var(--xddanger);}
