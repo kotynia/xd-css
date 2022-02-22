@@ -1,4 +1,10 @@
-/*paanda.io xd.css framework in 100 lines version alpha 0.5 */
+/*
+paanda.io xd.css framework  version alpha 0.6 
+Test page https://kotynia.github.io/xd.css/
+
+*/
+
+
 :root { /*padding, margins*/
 --xdsize-t:2px;
 --xdsize-s:4px;
@@ -29,6 +35,10 @@
 --xdlight-text:#000;
 --xdmedium-text:#000;
 --xddark-text:#fff;
+
+--font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+--font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+
 }
 
 html[data-theme='dark'] { 
@@ -67,9 +77,12 @@ html[data-theme='dark'] {
   background-color: var(--xdbackground);
   font-size: 14px;
   line-height: 1.250em;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family:  var(--font-family-sans-serif);
   color: var(--xddark) !important;
-  text-rendering: optimizeSpeed; } 
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+} 
 
 /*003*/ body {
   min-height: 100%;
@@ -78,10 +91,10 @@ html[data-theme='dark'] {
 
 /*004*/:focus,table.xd-table tbody tr:hover ,.xd-button:hover  { outline-width:3px; outline-style: solid; outline-color: rgba(225, 221, 0, 0.9); outline-offset:-2px; }
 
-/*005*/.xd-box-t,.xd-button-t,.xd-padding-t {padding:var(--xdsize-t) } 
-/*006*/.xd-box-s,.xd-button-s,.xd-padding-s , /*DEFAULT*/.xd-padding,.xd-box,.xd-button,select.xd-input,input.xd-input ,table.xd-table tbody tr td,table.xd-table thead tr th {padding: var(--xdsize-s) !important} 
-/*007*/.xd-box-m,.xd-button-m,.xd-padding-m  {padding:var(--xdsize-m) } 
-/*008*/.xd-box-l,.xd-button-l,.xd-padding-l  {padding:var(--xdsize-l) } 
+/*005*/.xd-box-t,.xd-padding-t {padding:var(--xdsize-t) } 
+/*006*/.xd-box-s,.xd-padding-s , /*DEFAULT*/.xd-padding,.xd-box,.xd-button,select.xd-input,input.xd-input ,table.xd-table tbody tr td,table.xd-table thead tr th {padding: var(--xdsize-s) !important} 
+/*007*/.xd-box-m,.xd-padding-m  {padding:var(--xdsize-m) } 
+/*008*/.xd-box-l,.xd-padding-l  {padding:var(--xdsize-l) } 
 /*009*/.xd-box-t,.xd-box-s,.xd-box-m,.xd-box-l,.xd-box  { display:block; width:100% } 
 
 /*010*/.xd-round-t {border-radius:var(--xdsize-t)  ; } 
@@ -106,7 +119,7 @@ html[data-theme='dark'] {
 /*026*/.xd-nw {  white-space: nowrap;text-overflow: ellipsis; overflow: hidden;}
 /*027*/.xd-block { display:block; width:100% }
 
-/*028*/ .xd-box,.xd-box-t,.xd-box-s,.xd-box-m,.xd-box-l,
+/*028*/ .xd-box,
         .xd-padding,.xd-padding-t,.xd-padding-s,.xd-padding-m,.xd-padding-l ,
         .xd-button,
         input.xd-input,select.xd-input,textarea.xd-input 
@@ -185,26 +198,26 @@ input.xd-input:required:valid,textarea.xd-input:required:valid ,select.xd-input:
 
 @media print,screen and  (min-width:601px){/*desktop tablet*/ /*style=" grid-column: span 2;"*/
   /*083*/.xd-hide-desktop {display:none!important }
-  /*084*/.xd-grid-12 {display: grid;grid-template-columns: repeat(12, minmax(10px, 1fr));}
-  /*085*/.xd-grid-11 {display: grid;grid-template-columns: repeat(11,  minmax(10px, 1fr));}
-  /*086*/.xd-grid-10 {display: grid;grid-template-columns: repeat(10,  minmax(10px, 1fr));}
-  /*087*/.xd-grid-9  {display: grid;grid-template-columns: repeat(9,  minmax(10px, 1fr));}
-  /*088*/.xd-grid-8  {display: grid;grid-template-columns: repeat(8,  minmax(10px, 1fr));}
-  /*089*/.xd-grid-7  {display: grid;grid-template-columns: repeat(7,  minmax(10px, 1fr));}
-  /*090*/.xd-grid-6  {display: grid;grid-template-columns: repeat(6,  minmax(10px, 1fr));}
-  /*091*/.xd-grid-5  {display: grid;grid-template-columns: repeat(5,  minmax(10px, 1fr));}
-  /*092*/.xd-grid-4  {display: grid;grid-template-columns: repeat(4,  minmax(10px, 1fr));  }
-  /*093*/.xd-grid-3  {display: grid;grid-template-columns: repeat(3,  minmax(10px, 1fr));}
-  /*094*/.xd-grid-2  {display: grid;grid-template-columns: repeat(2,  minmax(10px, 1fr));}
+  /*084*/.xd-grid-l12 {display: grid;grid-template-columns: repeat(12, minmax(10px, 1fr));}
+  /*085*/.xd-grid-l11 {display: grid;grid-template-columns: repeat(11,  minmax(10px, 1fr));}
+  /*086*/.xd-grid-l10 {display: grid;grid-template-columns: repeat(10,  minmax(10px, 1fr));}
+  /*087*/.xd-grid-l9  {display: grid;grid-template-columns: repeat(9,  minmax(10px, 1fr));}
+  /*088*/.xd-grid-l8  {display: grid;grid-template-columns: repeat(8,  minmax(10px, 1fr));}
+  /*089*/.xd-grid-l7  {display: grid;grid-template-columns: repeat(7,  minmax(10px, 1fr));}
+  /*090*/.xd-grid-l6  {display: grid;grid-template-columns: repeat(6,  minmax(10px, 1fr));}
+  /*091*/.xd-grid-l5  {display: grid;grid-template-columns: repeat(5,  minmax(10px, 1fr));}
+  /*092*/.xd-grid-l4  {display: grid;grid-template-columns: repeat(4,  minmax(10px, 1fr));  }
+  /*093*/.xd-grid-l3  {display: grid;grid-template-columns: repeat(3,  minmax(10px, 1fr));}
+  /*094*/.xd-grid-l2  {display: grid;grid-template-columns: repeat(2,  minmax(10px, 1fr));}
   /*095*/.xd-container {display:flex; flex-wrap: wrap;   justify-content: center;  overflow-x: auto;  }
 }
 @media  (max-width:600px){
   /*096*/.xd-hide-mobile    {display:none!important }
-  /*097*/.xd-grid-mobile-6  {display: grid;grid-template-columns: repeat(6,  minmax(10px, 1fr));}
-  /*098*/.xd-grid-mobile-5  {display: grid;grid-template-columns: repeat(5,  minmax(10px, 1fr));}
-  /*099*/.xd-grid-mobile-4  {display: grid;grid-template-columns: repeat(4, minmax(10px, 1fr));  }
-  /*100*/.xd-grid-mobile-3  {display: grid;grid-template-columns: repeat(3, minmax(10px, 1fr));}
-  /*101*/.xd-grid-mobile-2  {display: grid;grid-template-columns: repeat(2,  minmax(10px, 1fr));}
+  /*097*/.xd-grid-m6  {display: grid;grid-template-columns: repeat(6,  minmax(10px, 1fr));}
+  /*098*/.xd-grid-m5  {display: grid;grid-template-columns: repeat(5,  minmax(10px, 1fr));}
+  /*099*/.xd-grid-m4  {display: grid;grid-template-columns: repeat(4, minmax(10px, 1fr));  }
+  /*100*/.xd-grid-m3  {display: grid;grid-template-columns: repeat(3, minmax(10px, 1fr));}
+  /*101*/.xd-grid-m2  {display: grid;grid-template-columns: repeat(2,  minmax(10px, 1fr));}
   body {font-size:16px} 
 } 
 
