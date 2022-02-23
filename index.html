@@ -23,7 +23,7 @@
 </head>
 
 <body>
-<nav style="position: sticky; top: 0px;" class="xd-hide-print" >
+<nav  class="xd-hide-print" >
   <div class="xd-container xd-gap-m xd-padding-l xd-white xd-grid-m4"  >
     <a class="xd-button xd-border  xd-white" href="#building-blocks">Building Blocks</a>
     <a class="xd-button xd-border  xd-white" href="#containers">Containers</a>
@@ -79,19 +79,6 @@
   <article id="building-blocks" class=" xd-padding xd-section-m  xd-round-l xd-content">
     <h2 class="xd-section-s xd-center">Building blocks</h2>
 
-    <h3 class="xd-section-m">Containers</h2>
-    <div class="xd-grid-l5 xd-center xd-section-m xd-gap-l ">
-      <div class="xd-border">
-        <code class="xd-box">.xd-content</code>
-        <div>(-t -s -m -l)</div>
-      </div>
-      <div class="xd-border">
-        <code class="xd-box">.xd-responsive</code>
-      </div>
-      <div class="xd-border">
-        <code class="xd-box">.xd-container</code> <small>Button container</small>
-      </div>
-    </div>
     <h3 >Basic elements</h3>
     <div class="xd-grid-l5 xd-center xd-section-m xd-gap-l ">
 
@@ -292,7 +279,16 @@
         </optgroup>
       </select>
     </div>
-
+    <div>
+      <small class="xd-box">select disabled</small>
+      <select id="select" disabled class="xd-input">
+        <optgroup label="Option Group">
+          <option>Select</option>
+          <option>Option Two</option>
+          <option>Option Three</option>
+        </optgroup>
+      </select>
+    </div>
     <div>
       <small class="xd-box">Color input</small>
       <input type="color" class="xd-input xd-box" value="#000000" />
@@ -310,17 +306,10 @@
       <input type="date" class="xd-input xd-box" value="1970-01-01" />
     </div>
     <div>
-      <small class="xd-box">Month input</small>
-      <input type="month" class="xd-input xd-box" value="1970-01" />
-    </div>
-    <div>
       <small class="xd-box">Week input</small>
       <input type="week" class="xd-input xd-box" value="1970-W01" />
     </div>
-    <div>
-      <small class="xd-box">Datetime input</small>
-      <input type="datetime" class="xd-input" id="idt" value="1970-01-01T00:00:00Z" />
-    </div>
+
     <div>
       <small class="xd-box">Datetime-local input</small>
       <input type="datetime-local" class="xd-input" id="idtl" value="1970-01-01T00:00" />
@@ -434,7 +423,7 @@
 
 
     <h3 >Grid/Flex gap</h3>
-    <h4>.xd-gap-t</h4>
+    <h4><code>.xd-gap-t</code></h4>
     <div class="xd-grid-l5  xd-center xd-gap-t ">
       <div class="xd-border">&nbsp;</div>
       <div class="xd-border">&nbsp;</div>
@@ -447,7 +436,7 @@
       <div class="xd-border">&nbsp;</div>
       <div class="xd-border">&nbsp;</div>
     </div>
-    <h4>.xd-gap-s .xd-gap</h4>
+    <h4><code>.xd-gap-s .xd-gap</code></h4>
     <div class="xd-grid-l5  xd-center xd-gap-s ">
       <div class="xd-border">&nbsp;</div>
       <div class="xd-border">&nbsp;</div>
@@ -460,7 +449,7 @@
       <div class="xd-border">&nbsp;</div>
       <div class="xd-border">&nbsp;</div>
     </div>
-    <h4>.xd-gap-m</h4>
+    <h4><code>.xd-gap-m</code></h4>
     <div class="xd-grid-l5  xd-center xd-gap-m ">
       <div class="xd-border">&nbsp;</div>
       <div class="xd-border">&nbsp;</div>
@@ -474,7 +463,7 @@
       <div class="xd-border">&nbsp;</div>
     </div>
 
-    <h4 >.xd-gap-l</h4>
+    <h4 ><code>.xd-gap-l</code></h4>
     <div class="xd-grid-l5  xd-center xd-gap-l ">
       <div class="xd-border">&nbsp;</div>
       <div class="xd-border">&nbsp;</div>
@@ -488,7 +477,14 @@
       <div class="xd-border">&nbsp;</div>
     </div>
 
-    
+    <h3 >Standard grid</h3>
+    <h4><code>.xd-row > xd-col l1-l12 (desktop) s1-s12 (mobile) </code></h4>
+    <div class="xd-row">
+      <div class="xd-col l4 s4 xd-border"><code>.xd-col .l4 .s4</code></div>
+      <div class="xd-col l4 s2 xd-border"><code>.xd-col .l4 .s3</code></div>
+      <div class="xd-col l2 s2 xd-border"><code>.xd-col .l4 .s2</code></div>
+      <div class="xd-col l2 s4 xd-border"><code>.xd-col .l4 .s4</code></div>
+    </div>
     <article id="table" class="xd-white  xd-section-m  xd-round-l xd-content">
       <h3 >Tables</h3>
       <code class="xd-box-m">.xd-table .xd-responsive</code>
@@ -540,14 +536,33 @@
   </article>
 
 
+
+  
+
   <article id="containers" >
     <h2 class="xd-section-m xd-center">Containers</h2>
     <div class="xd-content-t  xd-medium xd-center ">
       <div class="xd-txt-l xd-padding-m"><code>.xd-content-t</code> 540px</div>
+      <div>content</div>
+      <div class="xd-responsive xd-border-white xd-border-s xd-section-s">
+        
+<table> <tr><td class="xd-nw">.xd-responsive</td>
+  <td class="xd-nw">.xd-responsive</td>
+  <td class="xd-nw">.xd-responsive</td>
+  <td class="xd-nw">.xd-responsive</td>
+  <td class="xd-nw">.xd-responsive</td>
+  <td class="xd-nw">.xd-responsive</td>
+  <td class="xd-nw">.xd-responsive</td>
+  <td class="xd-nw">.xd-responsive</td>
+  <td class="xd-nw">.xd-responsive</td>
+  <td class="xd-nw">.xd-responsive</td>
+</tr></table> 
+     </div>
+content
     </div>
     <br />
     <div class="xd-content-s xd-medium xd-center">
-      <div class="xd-txt-l xd-padding-m"><code>.xd-content-s</code> 960px</div>
+      <div class="xd-txt-l xd-padding-m"><code>.xd-content-s or .xd-content</code> 960px</div>
 
     </div>
     <br />
@@ -558,6 +573,20 @@
 
       <div class="xd-txt-l xd-padding-m"><code>.xd-content-l</code> 1320px</div>
     </div>   <br />
+
+    <div class="xd-content">
+    <h3>Navigation example (desktop /mobile)</h3>
+    <div class="xd-center"><code>.xd-container .xd-grid-s3 .xd-gap-s</code></div>
+ <div class="xd-container xd-grid-s3 xd-gap-s">
+      <a href="#" class="xd-button xd-border">xd-button width</a>
+      <a href="#" class="xd-button xd-border">xd-button long long</a>
+      <a href="#" class="xd-button xd-border">xd-button</a>
+      <a href="#" class="xd-button xd-border">xd-button long long long long</a>
+      <a href="#" class="xd-button xd-border">xd-button</a>
+    </div></div>
+    <br />
+
+   
 
 
   </article>

@@ -91,8 +91,8 @@ Test page https://kotynia.github.io/xd.css/
   /*004*/:focus,table.xd-table tbody tr:hover ,.xd-button:hover  { outline-width:3px; outline-style: solid; outline-color: rgba(225, 221, 0, 0.9); outline-offset:-2px; }
   
   /*005*/.xd-box-t,.xd-padding-t {padding:var(--xdsize-t) } 
-  /*006*/.xd-box-s,.xd-padding-s , /*DEFAULT*/.xd-padding,.xd-box,.xd-button,select.xd-input,input.xd-input ,table.xd-table tbody tr td,table.xd-table thead tr th {padding: var(--xdsize-s) !important} 
-  /*007*/.xd-box-m,.xd-padding-m  {padding:var(--xdsize-m) } 
+  /*006*/.xd-box-s,.xd-padding-s {padding: var(--xdsize-s) !important} 
+  /*007*/.xd-box-m,.xd-padding-m, /*DEFAULT*/.xd-padding,.xd-box,.xd-button,select.xd-input,input.xd-input ,table.xd-table tbody tr td,table.xd-table thead tr th   {padding:var(--xdsize-m) } 
   /*008*/.xd-box-l,.xd-padding-l  {padding:var(--xdsize-l) } 
   /*009*/.xd-box-t,.xd-box-s,.xd-box-m,.xd-box-l,.xd-box  { display:block; width:100% } 
   
@@ -100,11 +100,7 @@ Test page https://kotynia.github.io/xd.css/
   /*011*/.xd-round-s, /*DEFAULT*/.xd-round {border-radius:var(--xdsize-s) ; } 
   /*012*/.xd-round-m {border-radius:var(--xdsize-m)  } 
   /*013*/.xd-round-l {border-radius:var(--xdsize-l) ; } 
-  
-  /*014.xd-margin-t {margin:var(--xdsize-s) 0 }*/ 
-  /*015.xd-margin-s {margin:var(--xdsize-m) 0 }*/ 
-  /*016.xd-margin-m,.xd-margin {margin:var(--xdsize-l) 0 } */
-  /*017.xd-margin-l {margin:var(--xdsize-xl) 0 } */
+
   
  /*018*/.xd-txt-t { font-size:0.825rem; line-height:1.2;}
   /*019*/.xd-txt-s { font-size:1.25rem; line-height:1.2;}
@@ -141,7 +137,18 @@ Test page https://kotynia.github.io/xd.css/
         background:none !important;
         border-bottom: solid 1px  var(--xdlight) !important;
         color: var(--xddark); /*IOS default grey*/
-      }
+  }
+
+
+/*pozbycie sie range selector*/
+input.xd-input:disabled::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+
+
+
       
  .xd-button[disabled] {
   pointer-events: none; 
@@ -178,6 +185,8 @@ Test page https://kotynia.github.io/xd.css/
   /*051*/.xd-content-l   {display:block; max-width:1320px ;margin-left:auto; margin-right:auto;} 
   /*052*/.xd-responsive  {display:block; overflow-x:auto; } 
   
+
+
   /*054*/ textarea.xd-input , 
           input[type="text"].xd-input,
           input[type="number"].xd-input,
@@ -190,7 +199,9 @@ Test page https://kotynia.github.io/xd.css/
           /*input[type="month"].xd-input,*/
           /*input[type="week"].xd-input,*/
           input[type="search"].xd-input,select.xd-input {  
-            -webkit-border-radius:0px!important; -webkit-appearance: none!important;/*IOS remove default border radius, webkit-appearance is not enough*/}
+            -webkit-border-radius:0px!important; -webkit-appearance: none!important; -moz-appearance: textfield;/*IOS remove default border radius, webkit-appearance is not enough*/}
+
+       
 
           input[type="date"].xd-input,
           input[type="month"].xd-input,
@@ -240,12 +251,8 @@ Test page https://kotynia.github.io/xd.css/
   /*082*/ .xd-image { max-width:100%; max-height:600px; min-width:30px /*prevent scalowania ponizej 30 px np w srs i avatarach*/} 
   
 
-      /*097*/.xd-grid-m6  {display: grid;grid-template-columns: repeat(6,  minmax(10px, 1fr));}
-    /*098*/.xd-grid-m5  {display: grid;grid-template-columns: repeat(5,  minmax(10px, 1fr));}
-    /*099*/.xd-grid-m4  {display: grid;grid-template-columns: repeat(4, minmax(10px, 1fr));  }
-    /*100*/.xd-grid-m3  {display: grid;grid-template-columns: repeat(3, minmax(10px, 1fr));}
-    /*101*/.xd-grid-m2  {display: grid;grid-template-columns: repeat(2,  minmax(10px, 1fr));}
-    /*101*/.xd-grid-m1  {display: grid;grid-template-columns: repeat(1,  minmax(10px, 1fr));}
+
+      /*095*/.xd-container {display:flex; flex-wrap: wrap;   justify-content: center;  overflow-x: auto;  }
 
     .w3-container:after,.xd-row:after,.xd-row:before { content:""; display:table; clear:both } 
     .xd-col,.w3-half,.w3-third,.w3-twothird,.w3-threequarter,.w3-quarter { float:left; width:100% } 
@@ -273,7 +280,7 @@ Test page https://kotynia.github.io/xd.css/
     /*092*/.xd-grid-l4  {display: grid;grid-template-columns: repeat(4,  minmax(10px, 1fr));}
     /*093*/.xd-grid-l3  {display: grid;grid-template-columns: repeat(3,  minmax(10px, 1fr));}
     /*094*/.xd-grid-l2  {display: grid;grid-template-columns: repeat(2,  minmax(10px, 1fr));}
-    /*095*/.xd-container {display:flex; flex-wrap: wrap;   justify-content: center;  overflow-x: auto;  }
+  
 
   }
   @media  (max-width:600px){
@@ -290,6 +297,13 @@ Test page https://kotynia.github.io/xd.css/
     /*093*/.xd-grid-l3  {display: grid;grid-template-columns: repeat(1,  minmax(10px, 1fr));}
     /*094*/.xd-grid-l2  {display: grid;grid-template-columns: repeat(1,  minmax(10px, 1fr));}
   
+    /*097*/.xd-grid-s6  {display: grid;grid-template-columns: repeat(6,  minmax(10px, 1fr));}
+    /*098*/.xd-grid-s5  {display: grid;grid-template-columns: repeat(5,  minmax(10px, 1fr));}
+    /*099*/.xd-grid-s4  {display: grid;grid-template-columns: repeat(4, minmax(10px, 1fr));  }
+    /*100*/.xd-grid-s3  {display: grid;grid-template-columns: repeat(3, minmax(10px, 1fr));}
+    /*101*/.xd-grid-s2  {display: grid;grid-template-columns: repeat(2,  minmax(10px, 1fr));}
+    /*101*/.xd-grid-s1  {display: grid;grid-template-columns: repeat(1,  minmax(10px, 1fr));}
+
     /*096*/.xd-hide-mobile    {display:none!important }
     body {font-size:16px} 
   } 
