@@ -75,7 +75,6 @@ Test page https://kotynia.github.io/xd.css/
     background-repeat: no-repeat;
     background-color: var(--xdbackground);
     font-size: 14px;
-    line-height: 1.250em;
     font-family:  var(--font-family-sans-serif);
     color: var(--xddark) !important;
     -webkit-text-size-adjust: 100%;
@@ -214,7 +213,7 @@ input.xd-input:disabled::-webkit-inner-spin-button {
           input[type="datetime-local"].xd-input{padding:2px !important;  /*remove default border radius for ios*/} 
   
   /*055*/select.xd-input {border-right:solid 15px var(--xdlight) !important;padding:1px; }
-  /*056*/input[type='checkbox'].xd-input { transform: scale(1.25)} 
+  /*056*/input[type='checkbox'].xd-input { transform: scale(1.50);margin-left:4px;} 
   input.xd-input:required ,textarea.xd-input:required, select.xd-input:required  {box-shadow: inset 0px 0px 0px 2px var(--xddanger);}
   input.xd-input:required:valid,textarea.xd-input:required:valid ,select.xd-input:required:valid   {box-shadow: inset 0px 0px 0px 2px var(--xdsuccess);}
   
