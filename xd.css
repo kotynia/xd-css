@@ -304,7 +304,7 @@ input.xd-input:disabled::-webkit-inner-spin-button {
     /*101*/.xd-grid-s1  {display: grid;grid-template-columns: repeat(1,  minmax(10px, 1fr));}
 
     /*096*/.xd-hide-mobile    {display:none!important }
-    body {font-size:16px} 
+    html {font-size:16px} 
   } 
   
   /*102*/.xd-gap-t {gap:var(--xdsize-t) }
