@@ -163,13 +163,15 @@ input.xd-input:disabled::-webkit-inner-spin-button {
   
     /*030*/.xd-border-brand, .xd-input.xd-border-brand {border-color:var(--xdbrand)!important}
   /*031*/.xd-border-primary, .xd-input.xd-border-primary {border-color:var(--xdprimary)!important}
-  /*032*/.xd-border-secondary, .xd-input.xd-border-secondary {border-color:var(--xdmedium)!important}
+
   /*033*/.xd-border-success, .xd-input.xd-border-success  {border-color:var(--xdsuccess)!important }
   /*034*/.xd-border-danger, .xd-input.xd-border-danger {border-color:var(--xddanger)!important }
   /*035*/.xd-border-warning, .xd-input.xd-border-warning {border-color:var(--xdwarning)!important}
   /*036*/.xd-border-info, .xd-input.xd-border-info {border-color:var(--xdinfo)!important}
-  /*037*/.xd-border-light, .xd-input.xd-border-light {border-color:var(--xdwhite)}
-  /*038*/.xd-border-medium, .xd-input.xd-border-medium {border-color:var(--xdlight)}
+  /*037*/.xd-border-white, .xd-input.xd-border-white {border-color:var(--xdwhite)!important}
+  /*038*/.xd-border-light, .xd-input.xd-border-light {border-color:var(--xdlight)!important}
+  /*032*/.xd-border-medium, .xd-input.xd-border-medium {border-color:var(--xdmedium)!important}
+
   /*039*/.xd-border-dark, .xd-input.xd-border-dark {border-color:var(--xddark)!important} 
   
   /*044*/.xd-section-t {margin-top:var(--xdsize-m) !important;margin-bottom:var(--xdsize-m) !important /*required*/} 
@@ -236,13 +238,14 @@ input.xd-input:disabled::-webkit-inner-spin-button {
 
   /*071*/.xd-color-brand  {color:var(--xdbrand)!important}
   /*072*/.xd-color-primary  {color:var(--xdprimary)!important}
-  /*073*/.xd-color-secondary{color:var(--xdmedium)!important}
   /*074*/.xd-color-success  {color:var(--xdsuccess)!important}
   /*075*/.xd-color-danger   {color:var(--xddanger)!important}
   /*076*/.xd-color-warning  {color:var(--xdwarning)!important}
   /*077*/.xd-color-info     {color:var(--xdinfo)!important}
-  /*078*/.xd-color-light    {color:var(--xdwhite)!important}
-  /*079*/.xd-color-medium   {color:var(--xdlight)!important}
+
+  /*078*/.xd-color-white    {color:var(--xdwhite)!important}
+    /*078*/.xd-color-light    {color:var(--xdlight)!important}
+  /*079*/.xd-color-medium   {color:var(--xdmedium)!important}
   /*080*/.xd-color-dark     {color:var(--xddark)!important}
   /*081*/.xd-color-text     {color:var(--xddark)!important}
   
