@@ -90,11 +90,14 @@ Test page https://kotynia.github.io/xd.css/
   /*004*/:focus,table.xd-table tbody tr:hover ,.xd-button:hover  { outline-width:3px; outline-style: solid; outline-color: rgba(225, 221, 0, 0.9); outline-offset:-2px; }
   
   /*005*/.xd-box-t,.xd-padding-t {padding:var(--xdsize-t) } 
-  /*006*/.xd-box-s,.xd-padding-s, /*DEFAULT*/.xd-padding,.xd-box,.xd-button,select.xd-input,input.xd-input ,table.xd-table tbody tr td,table.xd-table thead tr th  {padding: var(--xdsize-s) !important} 
+  /*006*/.xd-box-s,.xd-padding-s, /*DEFAULT*/.xd-padding,.xd-box,.xd-button,select.xd-input,input.xd-input ,table.xd-table tbody tr td {padding: var(--xdsize-s) } 
+  table.xd-table thead tr th  {padding: var(--xdsize-t) ; text-transform: uppercase;} 
   /*007*/.xd-box-m,.xd-padding-m  {padding:var(--xdsize-m) } 
   /*008*/.xd-box-l,.xd-padding-l  {padding:var(--xdsize-l) } 
   /*009*/.xd-box-t,.xd-box-s,.xd-box-m,.xd-box-l,.xd-box  { display:block; width:100% } 
   
+  .xd-shadow { box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;}
+
   /*010*/.xd-round-t {border-radius:var(--xdsize-t)  ; } 
   /*011*/.xd-round-s, /*DEFAULT*/.xd-round {border-radius:var(--xdsize-s) ; } 
   /*012*/.xd-round-m {border-radius:var(--xdsize-m)  } 
@@ -224,16 +227,16 @@ input.xd-input:disabled::-webkit-inner-spin-button {
   /*059*/table.xd-table > tbody > tr > td, table.xd-table > tfoot > tr > th  {  border-top:1px solid  var(--xdlight) } 
   /*060*/table.xd-table a:hover {  text-decoration: underline;  }
   
-  /*061*/.xd-brand    {background-color:var(--xdbrand)!important ; color:var(--xdbrand-text)}
-  /*062*/.xd-primary  {background-color:var(--xdprimary)!important; color:var(--xdprimary-text)}
-  /*063*/.xd-medium {background-color:var(--xdmedium)!important; color:var(--xdmedium-text)}
-  /*064*/.xd-success  {background-color:var(--xdsuccess)!important; color:var(--xdsuccess-text)}
-  /*065*/.xd-danger   {background-color:var(--xddanger)!important; color:var(--xddanger-text)}
-  /*066*/.xd-warning  {background-color:var(--xdwarning)!important; color:var(--xdwarning-text)}
-  /*067*/.xd-info     {background-color:var(--xdinfo)!important; color:var(--xdinfo-text)}
-  /*068*/.xd-white    {background-color:var(--xdwhite)!important; color:var(--xdwhite-text)}
-  /*069*/.xd-light   {background-color:var(--xdlight)!important; color:var(--xdinfo-text)}
-  /*070*/.xd-dark     {background-color:var(--xddark)!important; color:var(--xddark-text)}
+  /*061*/.xd-brand    {background-color:var(--xdbrand)!important ; color:var(--xdbrand-text)!important}
+  /*062*/.xd-primary  {background-color:var(--xdprimary)!important; color:var(--xdprimary-text)!important}
+  /*063*/.xd-medium {background-color:var(--xdmedium)!important; color:var(--xdmedium-text)!important}
+  /*064*/.xd-success  {background-color:var(--xdsuccess)!important; color:var(--xdsuccess-text)!important}
+  /*065*/.xd-danger   {background-color:var(--xddanger)!important; color:var(--xddanger-text)!important}
+  /*066*/.xd-warning  {background-color:var(--xdwarning)!important; color:var(--xdwarning-text)!important}
+  /*067*/.xd-info     {background-color:var(--xdinfo)!important; color:var(--xdinfo-text)!important}
+  /*068*/.xd-white    {background-color:var(--xdwhite)!important; color:var(--xdwhite-text)!important}
+  /*069*/.xd-light   {background-color:var(--xdlight)!important; color:var(--xdinfo-text)!important}
+  /*070*/.xd-dark     {background-color:var(--xddark)!important; color:var(--xddark-text)!important}
   
 
   /*071*/.xd-color-brand  {color:var(--xdbrand)!important}
@@ -282,6 +285,7 @@ input.xd-input:disabled::-webkit-inner-spin-button {
     /*092*/.xd-grid-l4  {display: grid;grid-template-columns: repeat(4,  minmax(10px, 1fr));}
     /*093*/.xd-grid-l3  {display: grid;grid-template-columns: repeat(3,  minmax(10px, 1fr));}
     /*094*/.xd-grid-l2  {display: grid;grid-template-columns: repeat(2,  minmax(10px, 1fr));}
+    /*094*/.xd-grid-l1  {display: grid;grid-template-columns: repeat(1,  minmax(10px, 1fr));}
 
       /*094*/.xd-span-l2 {grid-column:span 2}
       /*094*/.xd-span-l3 {grid-column:span 3}
@@ -309,6 +313,7 @@ input.xd-input:disabled::-webkit-inner-spin-button {
     /*092*/.xd-grid-l4  {display: grid;grid-template-columns: repeat(1,  minmax(10px, 1fr));}
     /*093*/.xd-grid-l3  {display: grid;grid-template-columns: repeat(1,  minmax(10px, 1fr));}
     /*094*/.xd-grid-l2  {display: grid;grid-template-columns: repeat(1,  minmax(10px, 1fr));}
+    /*094*/.xd-grid-l1  {display: grid;grid-template-columns: repeat(1,  minmax(10px, 1fr));}
   
     /*097*/.xd-grid-s6  {display: grid;grid-template-columns: repeat(6,  minmax(10px, 1fr));}
     /*098*/.xd-grid-s5  {display: grid;grid-template-columns: repeat(5,  minmax(10px, 1fr));}
@@ -344,4 +349,3 @@ input.xd-input:disabled::-webkit-inner-spin-button {
   
   xd-input xd-border-l
   */
-
