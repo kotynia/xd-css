@@ -266,7 +266,7 @@ input.xd-input:disabled::-webkit-inner-spin-button {
     .xd-col.s9 { width:74.99999% } .xd-col.s10 { width:83.33333% } .xd-col.s11 { width:91.66666% } .xd-col.s12 { width:99.99999% } 
      */
 
-    
+    .xd-grid-300 {display: grid;grid-template-columns: repeat(auto-fit, minmax(300px, auto)); }  
 
   @media print,screen and  (min-width:601px){/*desktop tablet*/ /*style=" grid-column: span 2;"*/
     /*083*/.xd-hide-desktop {display:none!important }
