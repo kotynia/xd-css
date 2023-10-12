@@ -11,9 +11,7 @@
       --vp-sidebar-width-small: 270px;
     }
 
-    body {
-      width: 100%;
-    }
+   
 
     .app {
       display: flex;
@@ -30,17 +28,10 @@
       height: 100vh;
     }
 
-    article {
-      margin: 120px 0px;
-    }
+    
 
-    nav {}
 
-    .content {
-      margin: 0 auto;
-      width: 900px
-        /*calc(100vw- var(--vp-sidebar-width-small))*/
-    }
+   
 
     code {
       font-weight: bolder;
@@ -50,7 +41,7 @@
 
 <body>
   <div class="app">
-    <aside class="xd-hide-print">
+    <aside class="xd-hide-print xd-hide-mobile">
       <nav class="xd-grid-1 xd-padding-m">
         <div class="xd-section xd-grid-2">
           <div>
@@ -102,11 +93,11 @@
       </nav>
     </aside>
 
-    <div id="top" class=" hide content" role="document">
+    <div id="top" class="xd-content" role="document">
 
       <article id="why">
 
-        <h2>Nano css framework ~ 9KB</h2>
+        <h2>xd.css - nano css framework ~ 9KB</h2>
         <ul>
           <li>
             Ideal for Beginners: Offers a straightforward approach with uncomplicated building blocks suitable for
@@ -132,80 +123,80 @@
 
       <article id="grid">
         <h2>Grid System</h2>
-
+    
         <div class="xd-grid-l5 xd-section-m xd-center xd-gap-l ">
           <div>
             <div style="height:60px">From 1 to 12 columns fixed on mobile and desktop</div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-1</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-2</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-3</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-4</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-5</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-6</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-7</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-8</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-9</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-10</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-11</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-12</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-24</code></div>
+            <div class="xd-border">.xd-grid-1</div>
+            <div class="xd-border">.xd-grid-2</div>
+            <div class="xd-border">.xd-grid-3</div>
+            <div class="xd-border">.xd-grid-4</div>
+            <div class="xd-border">.xd-grid-5</div>
+            <div class="xd-border">.xd-grid-6</div>
+            <div class="xd-border">.xd-grid-7</div>
+            <div class="xd-border">.xd-grid-8</div>
+            <div class="xd-border">.xd-grid-9</div>
+            <div class="xd-border">.xd-grid-10</div>
+            <div class="xd-border">.xd-grid-11</div>
+            <div class="xd-border">.xd-grid-12</div>
+            <div class="xd-border">.xd-grid-24</div>
           </div>
           <div>
             <div style="height:60px">From 1 to 12 columns fixed on mobile</div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-s1</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-s2</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-s3</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-s4</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-s5</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-s6</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-s7</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-s8</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-s9</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-s10</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-s11</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-s12</code></div>
+            <div class="xd-border">.xd-grid-s1</div>
+            <div class="xd-border">.xd-grid-s2</div>
+            <div class="xd-border">.xd-grid-s3</div>
+            <div class="xd-border">.xd-grid-s4</div>
+            <div class="xd-border">.xd-grid-s5</div>
+            <div class="xd-border">.xd-grid-s6</div>
+            <div class="xd-border">.xd-grid-s7</div>
+            <div class="xd-border">.xd-grid-s8</div>
+            <div class="xd-border">.xd-grid-s9</div>
+            <div class="xd-border">.xd-grid-s10</div>
+            <div class="xd-border">.xd-grid-s11</div>
+            <div class="xd-border">.xd-grid-s12</div>
           </div>
           <div>
             <div style="height:60px">From 1 to 12 columns fixed on desktop , auto on mobile</div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-l1</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-l2</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-l3</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-l4</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-l5</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-l6</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-l7</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-l8</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-l9</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-l10</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-l11</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-grid-l12</code></div>
+            <div class="xd-border">.xd-grid-l1</div>
+            <div class="xd-border">.xd-grid-l2</div>
+            <div class="xd-border">.xd-grid-l3</div>
+            <div class="xd-border">.xd-grid-l4</div>
+            <div class="xd-border">.xd-grid-l5</div>
+            <div class="xd-border">.xd-grid-l6</div>
+            <div class="xd-border">.xd-grid-l7</div>
+            <div class="xd-border">.xd-grid-l8</div>
+            <div class="xd-border">.xd-grid-l9</div>
+            <div class="xd-border">.xd-grid-l10</div>
+            <div class="xd-border">.xd-grid-l11</div>
+            <div class="xd-border">.xd-grid-l12</div>
           </div>
           <div>
             <div style="height:60px">Merge columns in grid</div>
-            <div class="xd-border"><code class="xd-box">.xd-span-2</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-span-3</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-span-4</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-span-5</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-span-6</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-span-7</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-span-8</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-span-9</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-span-10</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-span-11</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-span-12</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-span-24</code></div>
+            <div class="xd-border">.xd-span-2</div>
+            <div class="xd-border">.xd-span-3</div>
+            <div class="xd-border">.xd-span-4</div>
+            <div class="xd-border">.xd-span-5</div>
+            <div class="xd-border">.xd-span-6</div>
+            <div class="xd-border">.xd-span-7</div>
+            <div class="xd-border">.xd-span-8</div>
+            <div class="xd-border">.xd-span-9</div>
+            <div class="xd-border">.xd-span-10</div>
+            <div class="xd-border">.xd-span-11</div>
+            <div class="xd-border">.xd-span-12</div>
+            <div class="xd-border">.xd-span-24</div>
           </div>
-
+    
           <div>
             <div style="height:60px">From 1 to 12 columns fixed on desktop , auto on mobile</div>
-            <div class="xd-border"><code class="xd-box">.xd-gap</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-gap-t</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-gap-s</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-gap-m</code></div>
-            <div class="xd-border"><code class="xd-box">.xd-gap-l</code></div>
+            <div class="xd-border">.xd-gap</div>
+            <div class="xd-border">.xd-gap-t</div>
+            <div class="xd-border">.xd-gap-s</div>
+            <div class="xd-border">.xd-gap-m</div>
+            <div class="xd-border">.xd-gap-l</div>
           </div>
         </div>
-
+    
       </article>
 
       <article id="building-blocks">
@@ -909,8 +900,8 @@
       <article id="gridgallery">
 
         <h2>Grid gallery printing </h2>
-        <code class="xd-box-m">.xd-grid-l6 .xd-grid-m2 .xd-gap-l </code>
-        <div class="xd-grid-l6 xd-grid-m2 xd-gap-l ">
+        <code class="xd-box-m">.xd-grid-l6 .xd-grid-s2 .xd-gap-l </code>
+        <div class="xd-grid-l6 xd-grid-s2 xd-gap-l ">
           <div class="xd-span-2"><img src="http://placekitten.com/490/480" class="xd-image" alt="Image alt text" />
           </div>
           <div class="xd-span-2"><img src="http://placekitten.com/491/480" class="xd-image" alt="Image alt text" />
