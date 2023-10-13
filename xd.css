@@ -1,7 +1,7 @@
 /* xd.css framework version alpha 0.9 Test page https://kotynia.github.io/xd.css/ */
 :root 	{ 
 /*padding, margins*/
---xdsize-t:2px; --xdsize-s:4px; --xdsize-m:8px; --xdsize-l:16px; --xdsize-x:34px; --xdsize-xl:64px; 
+--xdsize-t:2px; --xdsize-s:4px; --xdsize-m:8px; --xdsize-l:16px; --xdsize-xl:34px; --xdsize-xxl:64px; 
 /*heights*/
 --xdborder-radius:6px; --line-height:1.4; --line-height-rem:1.4rem; 
 /*color palete*/
@@ -169,14 +169,14 @@ input[type="week"].xd-input ,input[type="date"].xd-input ,	input[type="time"].xd
 .xd-padding-s 	{ padding:var(--xdsize-s) }
 .xd-padding-m 	{ padding:var(--xdsize-m) }
 .xd-padding-l 	{ padding:var(--xdsize-l) }
-.xd-padding-x 	{ padding:var(--xdsize-x) }
 .xd-padding-xl 	{ padding:var(--xdsize-xl) }
+.xd-padding-xxl 	{ padding:var(--xdsize-xxl) }
 .xd-paddingy-t 	{ padding-top:var(--xdsize-t); padding-bottom:var(--xdsize-t) }
 .xd-paddingy-s 	{ padding-top:var(--xdsize-s); padding-bottom:var(--xdsize-s) }
 .xd-paddingy-m 	{ padding-top:var(--xdsize-m); padding-bottom:var(--xdsize-m) }
 .xd-paddingy-l 	{ padding-top:var(--xdsize-l); padding-bottom:var(--xdsize-l) }
-.xd-paddingy-x 	{ padding-top:var(--xdsize-x); padding-bottom:var(--xdsize-x) }
 .xd-paddingy-xl 	{ padding-top:var(--xdsize-xl); padding-bottom:var(--xdsize-xl) }
+.xd-paddingy-xxl 	{ padding-top:var(--xdsize-xxl); padding-bottom:var(--xdsize-xxl) }
 .xd-box 	{ display:inline-block; width:100% }
 /*display:inline-block box collapse and wrap properly depending on the available space in the containing element. No need to clear floats anymore.*/
 .xd-round 	{ border-radius:var(--xdborder-radius) }
@@ -239,10 +239,10 @@ div.xd-width-check 	{ width:30px !important; text-align:center }
 .xd-responsive 	{ display:block; overflow-x:auto }
 /*SETUP TABLE*/
 table.xd-table tbody tr td 	{ padding:var(--xdsize-t) }
-table.xd-table thead tr th 	{ font-weight: normal; color:var(--xd-gray4) ; height:var(--xdsize-x) ;padding:var(--xdsize-t); text-align:left; vertical-align:middle; text-transform:uppercase; font-size:0.8rem; }
+table.xd-table thead tr th 	{ font-weight: normal; color:var(--xd-gray4) ; height:var(--xdsize-xl) ;padding:var(--xdsize-t); text-align:left; vertical-align:middle; text-transform:uppercase; font-size:0.8rem; }
 table.xd-table thead tr th a 	{ color:var(--xd-gray4) ; }
 table.xd-table 	{ border-spacing:0; width:100%; display:table; }
-table.xd-table tbody tr td, table.xd-table tfoot tr th 	{ text-align:left; font-weight:normal; height:var(--xdsize-x); border-top:1px solid var(--xd-border) }
+table.xd-table tbody tr td, table.xd-table tfoot tr th 	{ text-align:left; font-weight:normal; height:var(--xdsize-xl); border-top:1px solid var(--xd-border) }
 table.xd-table-all tbody tr td, table.xd-table-all tfoot tr th 	{ border:1px solid var(--xd-border) }
 table.xd-table a:hover 	{ text-decoration:underline }
 table.xd-table .xd-button, table.xd-table .xd-tag 	{ vertical-align:middle }
@@ -271,6 +271,7 @@ table.xd-table .xd-button, table.xd-table .xd-tag 	{ vertical-align:middle }
 .xd-container-desktop 	{ display:flex; flex-wrap:wrap; overflow-x:auto; align-items:center }
 .xd-form 	{ display:grid; align-items:center; row-gap:var(--xdsize-m); grid-template-columns:minmax(40px, 0.30fr) minmax(30px, 1fr); gap:var(--xdsize-s) }
 .xd-hide-desktop 	{ display:none !important }
+
 .xd-grid-l1 	{ display:grid; grid-template-columns:repeat(1, minmax(10px, 1fr)) }
 .xd-grid-l2 	{ display:grid; grid-template-columns:repeat(2, minmax(10px, 1fr)) }
 .xd-grid-l3 	{ display:grid; grid-template-columns:repeat(3, minmax(10px, 1fr)) }
@@ -369,10 +370,11 @@ table.xd-table>tbody>tr>td, table.xd-table>tfoot>tr>th 	{ height:auto; border-to
 /*PRINTING*/
 @media print 	{ html 	{ font-size:10pt; font-family:Arial; color:#000 !important }
 nav, .xd-hide-print, .xd-button 	{ display:none !important }
+.xd-input { background-color:white;}
 .xd-responsive 	{ display:block; overflow-x:visible }
 @page 	{ size:A4 portrait; margin:10mm }
 /*avoid page break*/
-.xd-box, .xd-image, table.xd-table tbody tr td 	{ page-break-before:auto; page-break-after:auto; page-break-inside:avoid }
+article ,.xd-box, .xd-image, table.xd-table tbody tr td 	{ page-break-before:auto; page-break-after:auto; page-break-inside:avoid }
 }
 .xd-layout, .xd-layout-2, .xd-layout-3 	{ grid-template-columns:minmax(200px, 1fr) minmax(600px, 1140px) minmax(200px, 1fr); display:grid; gap:var(--xdsize-m) }
 
@@ -388,14 +390,12 @@ nav, .xd-hide-print, .xd-button 	{ display:none !important }
 }
 
 .xd-loading 	{ animation:xd-loading 1s step-start infinite; animation-delay:0.5s; color:var(--xd-gray4); text-align:center }
-.xd-loading:after 	{ font-weight:300;
 /* animation:xd-loading 1s step-start infinite; animation-delay:0.5s; */
-content:"working ..."; direction:ltr; white-space:nowrap }
+.xd-loading:after 	{ font-weight:300;content:"working ..."; direction:ltr; white-space:nowrap }
 .xd-noresults 	{ font-weight:300; color:var(--xd-gray4); display:grid; grid-template-columns:repeat(1, minmax(10px, 1fr)); gap:var(--xdsize-m); text-align:center !important; padding: var(--xdsize-m) }
 .xd-noresults:before 	{ font-size:25px; content:"☹ nic nie znaleziono"; white-space:nowrap }
+@keyframes xd-loading 	{ 50% 	{ opacity:0 }}
 
-@keyframes xd-loading 	{ 50% 	{ opacity:0 }
-}
 /*COLORS*/
 /*Warning white/dark are base color must be first can be overwrite*/
 .xd-white 	{ background-color:var(--xd-white); color:var(--xd-dark) !important }
@@ -468,7 +468,6 @@ content:"working ..."; direction:ltr; white-space:nowrap }
 .xd-text-white 	{ color:var(--xd-white) !important }
 .xd-text-light 	{ color:var(--xd-light) !important }
 .xd-text-dark 	{ color:var(--xd-dark) !important }
-/*match with label*/
 .xd-text-gray 	{ color:var(--xd-gray4) !important }
 
 .xd-text-blue0 	{ color:var(--xd-blue0); }
@@ -591,7 +590,7 @@ content:"working ..."; direction:ltr; white-space:nowrap }
 .xd-border.xd-dark, .xd-button.xd-dark, .xd-input.xd-dark 	{ border-color:var(--xd-gray7) }
 .xd-border.xd-white, .xd-button.xd-white, .xd-input.xd-white 	{ border-color:var(--xd-gray2) }
 .xd-border.xd-light, .xd-button.xd-light, .xd-input.xd-light 	{ border-color:var(--xd-gray2) }
-/*Border COLORS*/
+/*Border colors*/
 .xd-border-light 	{ border:1px solid; border-color:var(--xd-light) !important }
 .xd-border-brand 	{ border:1px solid; border-color:var(--xd-brand) !important }
 .xd-border-primary 	{ border:1px solid; border-color:var(--xd-primary) !important }
@@ -601,10 +600,7 @@ content:"working ..."; direction:ltr; white-space:nowrap }
 .xd-border-info 	{ border:1px solid; border-color:var(--xd-info) !important }
 .xd-border-white 	{ border:1px solid; border-color:var(--xd-white) !important }
 .xd-border-dark 	{ border:1px solid; border-color:var(--xd-dark) !important }
-
 /*Active links*/
 .router-link-exact-active, .xd-active 	{ box-shadow:inset 0 -2px 0 var(--xd-brand) !important }
 .xd-link 	{ text-overflow:ellipsis; white-space:nowrap; overflow:hidden;  color:var(--xd-blue6); cursor:pointer }
 .xd-link:hover 	{ text-decoration:underline }
-
-
