@@ -321,16 +321,13 @@ nav, .xd-hide-print, .xd-button 	{ display:none !important }
 article ,.xd-box, .xd-image, table.xd-table tbody tr td 	{ page-break-before:auto; page-break-after:auto; page-break-inside:avoid }
 }
 
-.xd-layout, .xd-layout-2, .xd-layout-3 	{ grid-template-columns:minmax(200px, 1fr) minmax(600px, 1140px) minmax(200px, 1fr); display:grid; gap:var(--xdsize-m) }
-.xd-layout>nav, .xd-layout-2>nav, .xd-layout-3>nav 	{ grid-area:nav; overflow-x:auto }
-.xd-layout-2>nav { position: sticky; top: 0px;}
-.xd-layout>nav { position: sticky; top: 0px; z-index:8!important; background-color:var(--xd-background);}
-.xd-layout>main, .xd-layout-2>main, .xd-layout-3>main 	{ grid-area:main; overflow-x:auto }
-.xd-layout>aside, .xd-layout-2>aside, .xd-layout-3>aside 	{ grid-area:aside; overflow-x:auto }
-.xd-layout 	{ grid-template-areas:"nav nav nav" "aside aside aside" "main main main" }
-.xd-layout-2 	{ grid-template-areas:"nav main main" "aside main main"   }
-.xd-layout-3 	{ grid-template-areas:"nav main aside" }
-@media screen and (max-width:600px) 	{ .xd-layout, .xd-layout-2, .xd-layout-3 	{ grid-template-areas:"nav nav nav" "aside aside aside" "main main main" }
+@media print, screen and (min-width:601px) 	{ 
+  .xd-layout-2 { display: flex; flex-direction: column;  }
+  .xd-layout-2 { display: flex; flex-direction: row; flex-wrap: nowrap; }
+  .xd-layout-2  nav { position: sticky; top: 0; border-right: 1px solid var(--xd-gray3); min-width:  270px; max-width:  270px; height: 100vh; overflow-y: auto;}
+}
+@media screen and (max-width:600px) 	{
+  .xd-layout-2  nav { max-height:300px ; overflow-y: auto;}
 }
 
 .xd-loading 	{ animation:xd-loading 1s step-start infinite; animation-delay:0.5s; color:var(--xd-gray4); text-align:center }

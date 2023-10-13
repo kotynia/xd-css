@@ -7,63 +7,22 @@
   <title>xd.css</title>
   <link rel="stylesheet" href="xd.css" />
   <style>
-    :root {
-      --vp-sidebar-width-small: 270px;
-    }
-
-
-
-    .app {
-      display: flex;
-      flex-direction: row;
-      min-height: 100vh;
-    }
-
-    aside {
-      z-index: 1;
-      position: sticky;
-      top: 0;
-      border-right: 1px solid var(--xd-gray3);
-      width: var(--vp-sidebar-width-small);
-      height: 100vh;
-      overflow-y: auto;
-    }
-
-    .menu_leftmargin {
-      margin-left: 10px
-    }
-
     article {
       margin-bottom: 100px;
-      page-break-inside: avoid;
-    }
-
-
-    code {
-      font-weight: bolder;
     }
   </style>
 </head>
 
 <body>
-  <div class="app">
-    <aside class="xd-hide-print xd-hide-mobile">
-      <nav class="xd-grid-1 xd-padding-m">
-        <div class="xd-section xd-grid-2">
-          <div>
-            <div class="xd-large "><a href="#why" class="xd-text-red9">😆 xd.css v0.9</div>
-            </a>
-          </div>
-          <div class="xd-padding">
-            <a href="#" class="xd-link xd-padding-t"
-              onclick="document.documentElement.setAttribute('data-theme', 'dark')">
-              Night</a>
-            <a href="#" class="xd-link xd-padding-t"
-              onclick="document.documentElement.setAttribute('data-theme', 'light')">💡Day</a>
-          </div>
-
-
+  <div class="xd-layout-2">
+    <nav class="xd-hide-print">
+      <div class="xd-section xd-grid-1">
+        <div>
+          <div class="xd-large "><a href="#why" class="xd-text-red9">😆 xd.css v0.9
+            </a></div>
         </div>
+
+
         <a class="xd-link xd-padding-t xd-grid-2" href="#variables">Variables <code>--xd-brand ...</code></a>
         <a class="xd-link xd-padding-t xd-grid-2" href="#grid">Grid System <code>xd-grid</code></a>
         <a class="xd-link xd-padding-t xd-grid-2" href="#building-blocks">Building Blocks <code>xd-button ...</code></a>
@@ -84,30 +43,23 @@
         <a class="xd-link xd-padding-t xd-grid-2" href="#texthelpers">Text Helpers <code>xd-center ...</code></a>
         <a class="xd-link xd-padding-t xd-grid-2" href="#typography">Typography</a>
 
-        <div class="xd-padding-t">Visibility</div>
-        <a class="xd-link xd-padding-t menu_leftmargin" href="#visibility">desktop, mobile, printing</a>
-
-
-
+      
+        <a class="xd-link xd-padding-t menu_leftmargin" href="#visibility">Visibility desktop, mobile, printing</a>
 
         <div class="xd-padding-t">Examples</div>
-        <div class="xd-padding-t">Grid: </div>
-        <a class="xd-link xd-padding-t" href="#grid-example1">12 cols </a>
-        <a class="xd-link xd-padding-t" href="#grid-example2">4 cols auto</a>
-        <a class="xd-link xd-padding-t" href="#grid-example3">4 cols spans</a>
+        <a class="xd-link xd-padding-t xd-grid-2" href="#grid-example1">Grid 12 cols <code>xd-grid-l12</code></a>
+        <a class="xd-link xd-padding-t xd-grid-2" href="#grid-example2">Grid 4 cols auto <code>xd-grid-l4</code></a>
+        <a class="xd-link xd-padding-t xd-grid-2" href="#grid-example3">Grid 4 cols spans <code>xd-span-4</code></a>
+        <a class="xd-link xd-padding-t xd-grid-2" href="#gridgallery">Grid Gallery <code>xd-grid-l6</code></a>
 
         <a class="xd-link xd-padding-t" href="#nonstandard">Audio, video, progress</a>
-        <a class="xd-link xd-padding-t" href="#gridgallery">Grid Gallery</a>
+
         <a class="xd-link xd-padding-t" href="#basicnavigation"> Basic navigation mobile friendly</a>
-        <div class="xd-padding xd-center">Tests</div>
-
-        <a class="xd-link xd-padding-t" href="#inputstest">Elements heights</a>
+        <a class="xd-link xd-padding-t xd-grid-2" href="#inputstest">Elements heights <code>xd-container</code></a>
         <a class="xd-link xd-padding-t" href="#unicodeicons">Unicode icons</a>
-
-      </nav>
-    </aside>
-
-    <div id="top" class="xd-content" role="document">
+      </div>
+    </nav>
+    <main role="document" class="xd-content">
 
       <article id="why">
 
@@ -116,6 +68,7 @@
             href="https://raw.githubusercontent.com/kotynia/xd.css/main/xd.css">download 9KB gzip</a>
 
         </h2>
+
         <ul>
           <li>
             Straightforward approach with uncomplicated building blocks.
@@ -131,7 +84,12 @@
           <li>
             Plays well with other frameworks.
           </li>
-          <li>Support for night mode, enhancing the user experience in low-light
+          <li>Support for <a href="#" class="xd-link xd-padding-t"
+              onclick="document.documentElement.setAttribute('data-theme', 'dark')">
+              Night</a> /
+            <a href="#" class="xd-link xd-padding-t"
+              onclick="document.documentElement.setAttribute('data-theme', 'light')">Day</a> mode, enhancing the user
+            experience in low-light
             conditions.
           </li>
         </ul>
@@ -389,13 +347,13 @@
           <button type="submit" class="xd-button xd-danger">
             button .xd-button .xd-danger
           </button>
-          <button type="submit" class="xd-button xd-border-l">
-            button .xd-button .xd-green .xd-border1
+          <button type="submit" class="xd-button xd-border xd-green">
+            button .xd-button .xd-green .xd-border-l
           </button>
           <button type="submit" class="xd-button xd-red" disabled class="xd-button">
             button:disabled .xd-button .xd-red
           </button>
-          <a href="#" class="xd-button xd-border-l xd-orange2">a .xd-button .xd-border</a>
+          <a href="#" class="xd-button xd-border-l xd-orange2">a .xd-button .xd-border-l</a>
           <a href="#" class="xd-button xd-warning xd-border" disabled>a:disabled .xd-warning .xd-button</a>
           <input type="text" class="xd-input xd-border-m xd-medium" placeholder=".xd-input" />
         </div>
@@ -944,7 +902,7 @@
             <tbody>
               <tr id="test">
                 <td><input type="checkbox" class="xd-input" /> </td>
-                <td style="padding:0px!important;"><img src="http://placekitten.com/27/27"  />
+                <td style="padding:0px!important;"><img src="http://placekitten.com/27/27" />
                 </td>
                 <td class="xd-nw" style="max-width:300px">Crane Arm Outside</td>
 
@@ -1068,7 +1026,7 @@
               <circle cx="100" cy="100" r="100" fill="#1fa3ec"></circle>
             </svg>
           </div>
-          <div> <img src="http://placekitten.com/480/480" 
+          <div> <img src="http://placekitten.com/480/480"
               style="aspect-ratio: 16 / 9; max-width: 300px; object-fit: cover;" /></div>
 
         </div>
@@ -1111,7 +1069,7 @@
 
       <article id="inputstest">
 
-        <h2>TEST: for equal height, all elements should have equal height</h2>
+        <h2>For equal height, all elements should have equal height</h2>
 
 
         <div class="xd-container xd-gap">
@@ -1183,7 +1141,7 @@
         }
 
       </script>
-    </div>
+    </main>
   </div>
 
 </body>
