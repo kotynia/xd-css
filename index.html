@@ -15,7 +15,7 @@
 
 <body>
   <div class="xd-layout-2">
-    <nav class="xd-hide-print">
+    <nav class="xd-hide-print xd-nav">
       <div class="xd-section xd-grid-1">
         <div>
           <div class="xd-large "><a href="#why" class="xd-text-red9">😆 xd.css v0.9
@@ -43,7 +43,7 @@
         <a class="xd-link xd-padding-t xd-grid-2" href="#texthelpers">Text Helpers <code>xd-center ...</code></a>
         <a class="xd-link xd-padding-t xd-grid-2" href="#typography">Typography</a>
 
-      
+
         <a class="xd-link xd-padding-t menu_leftmargin" href="#visibility">Visibility desktop, mobile, printing</a>
 
         <div class="xd-padding-t">Examples</div>
@@ -74,8 +74,11 @@
             Straightforward approach with uncomplicated building blocks.
           </li>
           <li>
-            Clean and intuitive HTML structure, with support for mobile
+            <b>Super simple</b> HTML structure, with support for mobile
             devices, grid layouts, and printing (CTRL+P to print this page).
+          </li>
+          <li>
+            No javascript
           </li>
           <li>
             Designed to seamlessly integrate with code-generated content in
@@ -95,6 +98,22 @@
         </ul>
       </article>
 
+test1
+      <!-- <div class="xd-gray" style="position:relative;">
+        <div class="xd-box xd-green" style="position:absolute; top:20px;">xd</div>
+        <div class="xd-box xd-red0" style="position:absolute; top:40px;">hellp</div>
+        <div class="xd-box xd-red1" style="position:absolute; top:60px;">hellp</div>
+        <div class="xd-box xd-red2" style="position:absolute; top:80px;">hellp</div>
+      </div> -->
+
+
+      <div class="xd-gray" style="position:relative;">
+        <div class="xd-box xd-green" style=" height:20px;">hellp</div>
+        <div class="xd-box xd-red0" style=" height:20px;">hellp</div>
+        <div class="xd-box xd-red1" style=" height:20px;">hellp</div>
+        <div class="xd-box xd-red2" style=" height:20px;">hellp</div>
+      </div>
+      test2
       <article id="variables">
 
         <h2>Variables</h2>
@@ -505,6 +524,11 @@
 
         </form>
 
+
+
+
+
+
       </article>
 
       <article id="otherhelpers">
@@ -516,7 +540,7 @@
             <img src="http://placekitten.com/490/480" class="xd-image" alt="xd-image">
           </div>
           <div class="xd-border xd-hover">.xd-hover</div>
-          <div class="xd-border xd-focus">.xd-focus</div>
+          <div class="xd-border xd-focus">.xd-focus , disable focus: .xd--focus</div>
           <a class="xd-border xd-active xd-button">.xd-active</a>
           <a class="xd-border xd-disabled xd-button">.xd-disabled</a>
           <div class="xd-shadow">.xd-shadow</div>
@@ -914,6 +938,36 @@
             </tbody>
           </table>
         </div>
+
+
+        <table class="xd-table-all">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>image</th>
+              <th>long</th>
+              <th class="xd-right">number</th>
+              <th class="xd-nw" style="max-width:40px" title="Column5 truncate">text</th>
+              <th>Input</th>
+              <th>text</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="test">
+              <td><input type="checkbox" class="xd-input" /> </td>
+              <td style="padding:0px!important;"><img src="http://placekitten.com/27/27" />
+              </td>
+              <td class="xd-nw" style="max-width:300px">Crane Arm Outside</td>
+
+              <td class="xd-right">234234.32</td>
+              <td class="xd-nw" style="max-width:40px">Hello World</td>
+              <td class="xd-nw"> <input type="text" class="xd-input" /></td>
+              <td class="xd-nw">Hook, Fabuland Tow Hook</td>
+            </tr>
+          </tbody>
+        </table>
+
+
       </article>
 
 
@@ -1119,6 +1173,157 @@
         </div>
       </article>
 
+      <article id="experiment-form" class="xd-content-t ">
+        <h2>Form experiment</h2>
+        <form class="xd-gray1 xd-grid-1 xd-gap-m xd-padding">
+          <label for="name" class="xd-grid-1 xd-tiny xd-focus xd-padding-t xd-border  xd-white"
+            style="padding:0 var(--xdsize-t); ">Your name please
+            <input type="text" class="xd--focus" required style="padding:0;font-size:1.125rem;border:0"
+              id="name" /></label>
+
+
+          <label for="name1" class="xd-grid-1 xd-tiny xd-focus xd-padding-t xd-border xd-white"
+            style="padding:0 var(--xdsize-t); ">Your phone number
+            <input type="text" class="xd--focus" style="padding:0;font-size:1.125rem;border:0" id="name1" /></label>
+
+          <label for="name2" class="xd-grid-1 xd-tiny xd-focus xd-padding-t xd-border xd-white"
+            style="padding:0 var(--xdsize-t); ">Name
+            <input type="text" class="xd--focus" style="padding:0;font-size:1.125rem;border:0" id="name2" /></label>
+        </form>
+      </article>
+
+
+
+
+      <article id="experiment-form" class="xd-content-t ">
+
+
+        <style>
+          :root {
+            --tabwidth: 100px;
+          }
+
+          .container nav {
+            position: relative;
+            height: 50px;
+            display: flex;
+          }
+
+          .container nav::after {
+            content: "";
+            background: var(--xd-gray2);
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            top: 47px;
+          }
+
+          .container nav label {
+            position: relative;
+            display: block;
+            height: 100%;
+            width: var(--tabwidth);
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+          }
+
+
+          .container>input[type='radio'] {
+            /* display: none; */
+          }
+
+          .container nav .slider {
+            position: absolute;
+            height: 4px;
+            background-color: var(--xd-red9);
+           
+            width: var(--tabwidth);
+            z-index: 1;
+            left: 0;
+            bottom: 0;
+            transition: all 0.3s ease;
+            filter: blur(0.4px);
+          }
+
+          #tab1:checked~nav .slider {
+            left: 0;
+          }
+
+          #tab2:checked~nav .slider {
+            left: var(--tabwidth);
+          }
+
+          #tab3:checked~nav .slider {
+            left: calc(var(--tabwidth)*2);
+          }
+
+          #tab1:checked~nav .tab1,
+          #tab2:checked~nav .tab2,
+          #tab3:checked~nav .tab3 {
+            color: var(--xd-red9);
+          }
+
+          section .content {
+            display: none;
+          }
+
+          #tab1:checked~section .content-1,
+          #tab2:checked~section .content-2,
+          #tab3:checked~section .content-3 {
+            display: block;
+          }
+        </style>
+
+        <h2>Tabs without javascript</h2>
+
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>CSS Tabs</title>
+          <link rel="stylesheet" href="style.css">
+
+        </head>
+
+        <body>
+          <div class="container">
+            <input type="radio" name="slider" id="tab1" checked>
+            <input type="radio" name="slider" id="tab2">
+            <input type="radio" name="slider" id="tab3"> < visible just for training display:none 
+            <nav>
+              <label for="tab1" class="tab1">Tab 1</label>
+              <label for="tab2" class="tab2">Tab 2</label>
+              <label for="tab3" class="tab3">Tab 3</label>
+              <div class="slider"></div>
+            </nav>
+            <section>
+              <div class="content content-1">
+                <div class="title">tab1</div>
+                <p>Ha Ha</p>
+              </div>
+              <div class="content content-2">
+                <div class="title">tab2</div>
+                <p>Ho Ho</p>
+              </div>
+              <div class="content content-3">
+                <div class="title">tab3</div>
+                <p>Hi Hi</p>
+              </div>
+
+            </section>
+          </div>
+        </body>
+
+        </html>
+
+      </article>
 
       <footer class="xd-center xd-padding-l xd-content">xd.css</footer>
       <script>

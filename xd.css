@@ -70,7 +70,7 @@ hr 	{ border:0; border-top:1px solid var(--xd-gray); margin:20px 0 }
 /*Remove range selector*/
 input:disabled::-webkit-inner-spin-button 	{ -webkit-appearance:none; -moz-appearance:textfield; margin:0 }
 ::placeholder 	{ color:var(--xd-dark); opacity:0.6 }
-::-webkit-scrollbar 	{scrollbar-gutter: stable; width:10px ; }
+::-webkit-scrollbar 	{scrollbar-gutter: stable; width:10px ;height:10px;  }
 ::-webkit-scrollbar-thumb 	{ background-color:var(--xd-gray3) }
 textarea {overflow-y: auto !important; } 
 del 	{ background-color:var(--xd-warning) }
@@ -86,7 +86,8 @@ input[type="file"].xd-input 	{ padding:1px !important }
 input[type="date"].xd-input, input[type="time"].xd-input, input[type="week"].xd-input, input[type="datetime-local"].xd-input 	{ padding:3px !important }
 input[type=number], input[type=number]::-webkit-inner-spin-button 	{ text-align:right; -webkit-appearance:none; appearance:textfield }
 input[type='checkbox'] 	{ appearance:checkbox }
-*:not(img):focus-visible, table.xd-table tbody tr:hover, .xd-button:hover , .xd-nav-item:hover	{ z-index:10; outline-width:3px; outline-style:solid; outline-color:var(--xd-outline); outline-offset:-3px }
+
+
 .xd-padding, .xd-button, .xd-input, .xd-loading, .xd-link 	{ border:solid 1px transparent; line-height:var(--line-height-rem); padding:var(--xdsize-s) }
 .xd-paddingy { border:solid 1px transparent; line-height:var(--line-height-rem); padding-top:var(--xdsize-s); padding-bottom:var(--xdsize-s) }
 .xd-button 	{ color:var(--xd-dark); border-radius:var(--xdborder-radius); background-color:transparent; text-decoration:none; text-align:center; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; cursor:pointer; direction:ltr; display:inline-block; max-width:100% }
@@ -205,8 +206,10 @@ table.xd-table .xd-button, table.xd-table .xd-tag 	{ vertical-align:middle }
 /*Modal*/
 .xd-modal 	{ z-index:100; display:none; padding:0; position:fixed; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0, 0, 0, 0.7) }
 .xd-modal-content 	{ margin:auto; background-color:var(--xd-white); position:relative; padding:0; outline:0; width:80vw }
+
 .xd-hover:hover 	{ background-color:var(--xd-success) }
-.xd-focus:hover 	{ z-index:10; outline-width:3px; outline-style:solid; outline-color:var(--xd-outline); outline-offset:-3px }
+*:not(img, .xd--focus):focus-visible,.xd-focus:hover, table.xd-table tbody tr:hover, .xd-button:hover , .xd-nav-item:hover	{ z-index:10; outline-width:3px; outline-style:solid; outline-color:var(--xd-outline); outline-offset:-3px }
+.xd--focus {outline:none}
 
 /*Desktop, tablet*/
 @media print, screen and (min-width:601px) 	{ 
@@ -324,10 +327,10 @@ article ,.xd-box, .xd-image, table.xd-table tbody tr td 	{ page-break-before:aut
 @media print, screen and (min-width:601px) 	{ 
   .xd-layout-2 { display: flex; flex-direction: column;  }
   .xd-layout-2 { display: flex; flex-direction: row; flex-wrap: nowrap; }
-  .xd-layout-2  nav { position: sticky; top: 0; border-right: 1px solid var(--xd-gray3); min-width:  270px; max-width:  270px; height: 100vh; overflow-y: auto;}
+  .xd-layout-2  .xd-nav { position: sticky; top: 0; border-right: 1px solid var(--xd-gray3); min-width:  270px; max-width:  270px; height: 100vh; overflow-y: auto;}
 }
 @media screen and (max-width:600px) 	{
-  .xd-layout-2  nav { max-height:300px ; overflow-y: auto;}
+  .xd-layout-2  .xd-nav { max-height:300px ; overflow-y: auto;}
 }
 
 .xd-loading 	{ animation:xd-loading 1s step-start infinite; animation-delay:0.5s; color:var(--xd-gray4); text-align:center }
@@ -488,6 +491,9 @@ article ,.xd-box, .xd-image, table.xd-table tbody tr td 	{ page-break-before:aut
 .xd-border-dark 	{ border:1px solid; border-color:var(--xd-dark) !important }
 
 /*Border colors*/
+.xd-border.xd-info,.xd-border-t.xd-info,.xd-border-s.xd-info,.xd-border-m.xd-info,.xd-border-l.xd-info, .xd-button.xd-info, .xd-input.xd-info { border-color:var(--xd-blue1) !important}
+.xd-border.xd-selected,.xd-border-t.xd-selected,.xd-border-s.xd-selected,.xd-border-m.xd-selected,.xd-border-l.xd-selected, .xd-button.xd-selected, .xd-input.xd-selected { border-color:var(--xd-blue2) !important}
+
 .xd-border.xd-gray,.xd-border-t.xd-gray,.xd-border-s.xd-gray,.xd-border-m.xd-gray,.xd-border-l.xd-gray, .xd-button.xd-gray, .xd-input.xd-gray { border-color:var(--xd-gray5) !important}
 .xd-border.xd-gray0,.xd-border-t.xd-gray0,.xd-border-s.xd-gray0,.xd-border-m.xd-gray0,.xd-border-l.xd-gray0, .xd-button.xd-gray0, .xd-input.xd-gray0 { border-color:var(--xd-gray1) !important}
 .xd-border.xd-gray1,.xd-border-t.xd-gray1,.xd-border-s.xd-gray1,.xd-border-m.xd-gray1,.xd-border-l.xd-gray1, .xd-button.xd-gray1, .xd-input.xd-gray1 { border-color:var(--xd-gray2) !important}
