@@ -28,7 +28,7 @@
   --xd-background:var(--xd-gray1);  --xd-white:#000020; 
   }
   
-  /*! Extract from normalize.css v8.0.1 | MIT License  + custom modifications  */
+  /*! Extract from normalize.css v8.0.1 | MIT License  +  modifications  */
   body 	{ min-height: 100vh; text-rendering: optimizeSpeed; margin:0}
   pre 	{ font-family:monospace, monospace; font-size:1em }
   a 	  { background-color:transparent }
@@ -132,15 +132,15 @@
   .xd-medium 	{ font-size:1.143rem !important; font-weight:500; line-height:var(--line-height-rem); } /*sync with buttons , for v_more_v4*/
   .xd-large 	{ font-size:1.286rem !important; font-weight:500; line-height:1.3em}
   .xd-xlarge 	{ font-size:1.714rem !important; font-weight:500; line-height:1.3em }
-  .xd-xxlarge 	{ font-size:2.714rem !important; font-weight:500; line-height:1.3em }
+  .xd-xxlarge { font-size:2.714rem !important; font-weight:500; line-height:1.3em }
   
   /*UTILITY*/
   .xd-shadow 	{ box-shadow:rgba(0, 0, 0, 0.18) 0px 2px 4px }
-  .xd-strong, b, strong 	{ 
-    font-weight:500 !important; /*text-shadow:-0.04ex 0 0 currentColor, 0.04ex 0 0 currentColor; -webkit-text-stroke-width:0.04ex */
-  }
+  /*text-shadow:-0.04ex 0 0 currentColor, 0.04ex 0 0 currentColor; -webkit-text-stroke-width:0.04ex */
+  .xd-strong, b, strong 	{ font-weight:500 !important; }
   .xd-underline 	{ text-decoration: underline;}
-  .xd-left 	{ text-align:left !important; direction:ltr /*cancel grid*/}
+  /*direction:ltr cancel parent container ltr*/
+  .xd-left 	{ text-align:left !important; direction:ltr}
   .xd-right 	{ text-align:right !important }
   .xd-center 	{ text-align:center !important }
   .xd-center-x 	{ justify-content:center }
@@ -185,9 +185,9 @@
   table.xd-table-all > tbody > tr > td, table.xd-table-all > tfoot > tr > th 	{ border:1px solid var(--xd-border) }
   table.xd-table a:hover 	{ text-decoration:underline }
   table.xd-table .xd-button, table.xd-table .xd-tag 	{ vertical-align:middle }
-  td .xd-input, .xd-input-table 	{ background-color:inherit;  border:1px dashed var(--xd-gray3) }
+  td .xd-input, .xd-input-table 	{   border:1px dashed var(--xd-gray3) }
   td .xd-input:hover, .xd-input-table:hover 	{ background-color:var(--xd-gray0) }
-  td.xd-image 	{ padding:1px 4px !important; vertical-align:middle }
+  td .xd-image 	{ padding:1px 4px !important; vertical-align:middle }
   /*Grid helpers*/
   .xd-container 	{ display:flex; flex-wrap:wrap; overflow-x:auto; align-items:baseline }
   .xd-container-16 img 	{ aspect-ratio:16/9; object-fit:cover }
@@ -355,18 +355,16 @@
     .xd-layout-2 { display: flex; flex-direction: row; flex-wrap: nowrap; }
     .xd-layout-2  .xd-nav { position: sticky; top: 0; border-right: 1px solid var(--xd-gray3); min-width:  270px; max-width:  270px; height: 100vh; overflow-y: auto;}
   }
-  @media screen and (max-width:600px) 	{
-    .xd-layout-2  .xd-nav { max-height:300px ; overflow-y: auto;}
-  }
+  @media screen and (max-width:600px) {.xd-layout-2  .xd-nav { max-height:300px ; overflow-y: auto;} }
   
   .xd-loading 	{ animation:xd-loading 1s step-start infinite; animation-delay:0.5s; color:var(--xd-gray4); text-align:center }
-  .xd-loading:after 	{ font-weight:300;content:"working ..."; direction:ltr; white-space:nowrap }
-  .xd-noresults 	{ font-weight:300; color:var(--xd-gray4); display:grid; grid-template-columns:repeat(1, minmax(10px, 1fr)); gap:var(--xdsize-m); text-align:center !important; padding: var(--xdsize-m) }
+  .xd-loading:after { font-weight:300;content:"working ..."; direction:ltr; white-space:nowrap }
+  .xd-noresults     { font-weight:300; color:var(--xd-gray4); display:grid; grid-template-columns:repeat(1, minmax(10px, 1fr)); gap:var(--xdsize-m); text-align:center !important; padding: var(--xdsize-m) }
   .xd-noresults:before 	{ font-size:25px; content:"☹ nic nie znaleziono"; white-space:nowrap }
-  @keyframes xd-loading 	{ 50% 	{ opacity:0 }}
+  @keyframes xd-loading { 50% 	{ opacity:0 }}
   
   /*Active links*/
-  .router-link-exact-active, .xd-active 	{ box-shadow:inset 0 -2px 0 var(--xd-brand) !important }
+  .router-link-exact-active:not(.xd--active), .xd-active:not(.xd--active) 	{ box-shadow:inset 0 -2px 0 var(--xd-brand) !important }
   .xd-link 	{ text-overflow:ellipsis; white-space:nowrap; overflow:hidden;  color:var(--xd-blue6); cursor:pointer }
   .xd-link:hover 	{ text-decoration:underline }
   
