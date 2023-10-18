@@ -96,24 +96,14 @@
             conditions.
           </li>
         </ul>
+
+        References:
+        <ul>
+
+          <li><a href="https://blogs.windows.com/msedgedev/2023/01/17/the-truth-about-css-selector-performanc">The truth about CSS selector performance</a></li>
+        </ul>
       </article>
 
-test1
-      <!-- <div class="xd-gray" style="position:relative;">
-        <div class="xd-box xd-green" style="position:absolute; top:20px;">xd</div>
-        <div class="xd-box xd-red0" style="position:absolute; top:40px;">hellp</div>
-        <div class="xd-box xd-red1" style="position:absolute; top:60px;">hellp</div>
-        <div class="xd-box xd-red2" style="position:absolute; top:80px;">hellp</div>
-      </div> -->
-
-
-      <div class="xd-gray" style="position:relative;">
-        <div class="xd-box xd-green" style=" height:20px;">hellp</div>
-        <div class="xd-box xd-red0" style=" height:20px;">hellp</div>
-        <div class="xd-box xd-red1" style=" height:20px;">hellp</div>
-        <div class="xd-box xd-red2" style=" height:20px;">hellp</div>
-      </div>
-      test2
       <article id="variables">
 
         <h2>Variables</h2>
@@ -616,18 +606,30 @@ test1
       <article id="texthelpers">
         <h2>Helpers text</h2>
 
-        <div class="xd-grid-l6 xd-section-m xd-gap-l">
+        <div class="xd-grid-l4 xd-section-m xd-gap-l">
           <div class="xd-border xd-center">.xd-center</div>
           <div class="xd-border xd-left">.xd-left</div>
           <div class="xd-border xd-right">.xd-right</div>
 
-          <div class="xd-border xd-nw">
-            <div class="xd-nw">.xd-nw realy long text lorem ipsum lorem ipsum</div>
-          </div>
+    
           <div class="xd-border xd-strong">.xd-strong</div>
 
 
           <div class="xd-border xd-underline">.xd-underline</div>
+          <div class="xd-border xd-clipboard">.xd-clipboard this will be selected</div>
+          <div class="xd-border xd-nw">
+            .xd-nw realy long text lorem ipsum lorem ipsum
+          </div>
+          <div class="xd-border xd-2lines">.xd-2lines this is first line
+            second line 
+            thid line
+            fourth line
+          </div>
+          <div class="xd-border xd-3lines"><div>.xd-3lines this is first line  test test test</div>
+          <div> second line test test test </div>
+          <div> third line  test test test </div>
+          <div> fourth line  test test test</div></div>
+   
 
         </div>
       </article>
@@ -908,7 +910,7 @@ test1
         </div>
       </article>
       <article id="table">
-        <h2>Tables</h2>
+        <h2>Table 1</h2>
         <code class="xd-box-m">.xd-table .xd-responsive</code>
         <div class="xd-responsive">
           <table class="xd-table xd-white">
@@ -924,7 +926,7 @@ test1
               </tr>
             </thead>
             <tbody>
-              <tr id="test">
+              <tr class="autogeneratecontent">
                 <td><input type="checkbox" class="xd-input" /> </td>
                 <td style="padding:0px!important;"><img src="http://placekitten.com/27/27" />
                 </td>
@@ -939,6 +941,8 @@ test1
           </table>
         </div>
 
+        <h2>Table 2</h2>
+        <code class="xd-box-m">.xd-table-all</code>
 
         <table class="xd-table-all">
           <thead>
@@ -953,7 +957,7 @@ test1
             </tr>
           </thead>
           <tbody>
-            <tr id="test">
+            <tr class="autogeneratecontent">
               <td><input type="checkbox" class="xd-input" /> </td>
               <td style="padding:0px!important;"><img src="http://placekitten.com/27/27" />
               </td>
@@ -1092,6 +1096,41 @@ test1
         <h2>Grid gallery printing </h2>
         <code class="xd-box-m">.xd-grid-l6 .xd-grid-s2 .xd-gap-l </code>
         <div class="xd-grid-l6 xd-grid-s2 xd-gap-l ">
+          <img src="http://placekitten.com/490/480" class="xd-span-2" />
+          <img src="http://placekitten.com/491/480" class="xd-span-2" />
+          <img src="http://placekitten.com/492/480" />
+          <img src="http://placekitten.com/483/480" />
+          <img src="http://placekitten.com/485/480" />
+          <img src="http://placekitten.com/485/480" />
+          <img src="http://placekitten.com/486/480" />
+          <img src="http://placekitten.com/488/480" />
+          <img src="http://placekitten.com/473/480" />
+          <img src="http://placekitten.com/423/480" />
+          <img src="http://placekitten.com/413/480" />
+          <img src="http://placekitten.com/463/480" />
+          <img src="http://placekitten.com/483/480" />
+        </div>
+        <h2>Gallery with 16/9 aspect ratio</h2>
+        <code class="xd-box-m">.xd-grid-l6 .xd-grid-s2 .xd-gap-l .xd-container-16 </code>
+        <div class="xd-grid-l6 xd-grid-s2 xd-gap-l xd-container-16">
+          <img src="http://placekitten.com/490/480" class="xd-span-2" />
+          <img src="http://placekitten.com/491/480" class="xd-span-2" />
+          <img src="http://placekitten.com/492/480" />
+          <img src="http://placekitten.com/483/480" />
+          <img src="http://placekitten.com/485/480" />
+          <img src="http://placekitten.com/485/480" />
+          <img src="http://placekitten.com/486/480" />
+          <img src="http://placekitten.com/488/480" />
+          <img src="http://placekitten.com/473/480" />
+          <img src="http://placekitten.com/423/480" />
+          <img src="http://placekitten.com/413/480" />
+          <img src="http://placekitten.com/463/480" />
+          <img src="http://placekitten.com/483/480" />
+        </div>
+
+        <h2>Gallery with 4/3 aspect ratio</h2>
+        <code class="xd-box-m">.xd-grid-l6 .xd-grid-s2 .xd-gap-l .xd-container-4</code>
+        <div class="xd-grid-l6 xd-grid-s2 xd-gap-l xd-container-4">
           <img src="http://placekitten.com/490/480" class="xd-span-2" />
           <img src="http://placekitten.com/491/480" class="xd-span-2" />
           <img src="http://placekitten.com/492/480" />
@@ -1327,23 +1366,18 @@ test1
 
       <footer class="xd-center xd-padding-l xd-content">xd.css</footer>
       <script>
-        //  document.head.insertAdjacentHTML("beforeend", `<style>[class]:hover:not(.hide){  box-shadow:inset 0px 0px 0px 2px rgba(0,0,0,0.25); }</style>`);
-        // document.head.insertAdjacentHTML("beforeend", `<style>[class]:before  {font-size:8px; height:14px ;margin:0!important; padding:0!important;display:block; content: attr(class); color:white ;  background:rgba(0,0,0,0.25) }</style>`);
+
+//autogenerate content
+var elems = document.querySelectorAll('.autogeneratecontent');
+[].forEach.call(elems, function(el) {
+  for (let step = 0; step < 10; step++) {     
+    var clone = el.cloneNode(true);
+    el.after(clone);
+  }
+
+});
 
 
-        //test data
-        for (let step = 0; step < 10; step++) {
-
-          var elem = document.querySelector('#test');
-
-          // Create a copy of it
-          var clone = elem.cloneNode(true);
-          clone.id = '';
-
-          // Inject it into the DOM
-          elem.after(clone);
-
-        }
 
       </script>
     </main>
