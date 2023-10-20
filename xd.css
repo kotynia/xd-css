@@ -217,7 +217,7 @@
   /*Desktop, tablet*/
   @media print, screen and (min-width:601px) 	{ 
   .xd-container-desktop 	{ display:flex; flex-wrap:wrap; overflow-x:auto; align-items:center }
-  .xd-form 	{ display:grid; align-items:center; row-gap:var(--xdsize-m); grid-template-columns:minmax(40px, 0.30fr) minmax(30px, 1fr); gap:var(--xdsize-s) }
+  .xd-form 	{ display:grid; align-items:center; row-gap:var(--xdsize-m); grid-template-columns:minmax(40px, 130px) minmax(40px, 1fr); gap:var(--xdsize-s) }
   .xd-hide-desktop 	{ display:none !important }
   
   .xd-grid-l1 	{ display:grid; grid-template-columns:repeat(1, minmax(10px, 1fr)) }
