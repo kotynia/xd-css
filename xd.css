@@ -1,4 +1,7 @@
-/* xd.css 1.0 by Marcin Kotynia | MIT License | github.com/kotynia/xd.css */
+/**
+ * xd.css 1.0 by Marcin Kotynia | MIT License | github.com/kotynia/xd.css
+ */
+
 :root 	{ 
   /*Sizes*/
   --xdsize-t:2px; --xdsize-s:4px; --xdsize-m:8px; --xdsize-l:16px; --xdsize-xl:34px; --xdsize-xxl:64px; 
