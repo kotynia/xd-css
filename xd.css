@@ -76,6 +76,8 @@
   ::placeholder 	{ color:var(--xd-dark); opacity:0.6 }
   ::-webkit-scrollbar 	{scrollbar-gutter: stable; width:10px ;height:10px;  }
   ::-webkit-scrollbar-thumb 	{ background-color:var(--xd-gray5) }
+
+  
   textarea {overflow-y: auto !important; } 
   del 	{ background-color:var(--xd-warning) }
   ins 	{ background-color:var(--xd-success) }
@@ -356,7 +358,12 @@
   
   @media print, screen and (min-width:601px) 	{ 
     .xd-layout-2 { display:grid; grid-template-columns:minmax(40px, 270px) minmax(40px, 1fr);   }
-    .xd-layout-2  .xd-nav { position: sticky; top: 0; border-right: 1px solid var(--xd-gray3);  height: 100vh; overflow-y: auto;}
+    .xd-nav { position: sticky; top: 0;  height: 100vh; overflow-y: auto;
+      
+    }
+    .xd-nav::-webkit-scrollbar 	{scrollbar-gutter: stable; width:5px ;height:5px;  }
+    .xd-nav::-webkit-scrollbar-thumb 	{ background-color:var(--xd-white) }
+    .xd-nav:hover::-webkit-scrollbar-thumb 	{ background-color:var(--xd-gray3) }
   }
 
   .xd-loading 	{ animation:xd-loading 1s step-start infinite; animation-delay:0.5s; color:var(--xd-gray4); text-align:center }
