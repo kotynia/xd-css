@@ -135,10 +135,10 @@
   
   .xd-tiny 	{ font-size:0.714rem !important }
   .xd-small,label, figcaption,small  	{ font-size:0.8rem !important ;line-height:1.3em;}
-  .xd-medium 	{ font-size:1.143rem !important; font-weight:600; line-height:var(--xd-line-height-rem); } /*sync with buttons , for v_more_v4*/
-  .xd-large 	{ font-size:1.286rem !important; font-weight:600; line-height:1.3em}
-  .xd-xlarge 	{ font-size:1.714rem !important; font-weight:600; line-height:1.3em }
-  .xd-xxlarge { font-size:2.714rem !important; font-weight:600; line-height:1.3em }
+  .xd-medium 	{ font-size:1.143rem !important; line-height:var(--xd-line-height-rem); } /*sync with buttons , for v_more_v4*/
+  .xd-large 	{ font-size:1.286rem !important; line-height:1.3em}
+  .xd-xlarge 	{ font-size:1.714rem !important; line-height:1.3em }
+  .xd-xxlarge { font-size:2.714rem !important; line-height:1.3em }
   
   /*UTILITY*/
   .xd-shadow 	{ box-shadow:rgba(0, 0, 0, 0.18) 0px 2px 4px }
