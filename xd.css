@@ -34,10 +34,8 @@
   
   /*! Extract from normalize.css v8.0.1 | MIT License  +  modifications  */
   body 	{ min-height: 100vh; text-rendering: optimizeSpeed; margin:0}
-  pre 	{ font-family:monospace, monospace; font-size:1em }
   a 	  { background-color:transparent }
   abbr[title] 	{ border-bottom:none; text-decoration:underline; text-decoration:underline dotted }
-  code 	{ background-color:var(--xd-gray1); color:var(--xd-dark) ;font-size:0.9em ; font-weight: normal; font-family: monospace;}
   /* For images to not be able to exceed their container */
   img 	{ border-style:none;  max-inline-size: 100%;max-block-size: 100%;  vertical-align:middle }
   button, input, optgroup, select, textarea 	{ font-family:inherit; font-size:100%; margin:0 }
@@ -67,7 +65,9 @@
   a 	{ cursor:pointer; text-decoration:none; overflow-wrap:break-word; color:var(--xd-primary) }
   select[multiple] 	{ background:none; width:auto; height:auto; padding:0; margin:0; border-width:1px; border-style:inset; -moz-appearance:menulist; -webkit-appearance:menulist; appearance:menulist }
   canvas, svg 	{ vertical-align:middle }
-  pre 	{ border-radius:var(--xd-border-radius); background-color:var(--xd-light); page-break-inside:avoid; font-family:monospace; margin-bottom:1.6em; max-width:100%; overflow:auto; padding:1em 1.5em; display:block; word-wrap:break-word }
+
+  code,pre 	{ background-color:var(--xd-gray1); font-size:0.9rem ; font-weight: normal; font-family: monospace; }
+  pre 	{  page-break-inside:avoid;  max-width:100%; overflow:auto;  word-wrap:break-word; }
   /*Important for consistency in text area*/
   p 	{ margin-block-start:0 }
   hr 	{ border:0; border-top:1px solid var(--xd-gray); margin:20px 0 }
@@ -341,7 +341,7 @@
     vertical-align: baseline;
     -webkit-print-color-adjust: exact; }
     html 	{ font-size:10pt; font-family:Arial; }
-    nav, .xd-hide-print, .xd-button 	{ display:none !important }
+    .xd-nav ,nav, .xd-hide-print, .xd-button 	{ display:none !important }
     .xd-input { background-color:white;}
     .xd-responsive 	{ display:block; overflow-x:visible }
     @page 	{ size:A4 portrait; margin:10mm }
@@ -356,7 +356,7 @@
     article ,.xd-box, .xd-image, td 	{ page-break-before:auto; page-break-after:auto; page-break-inside:avoid }
   }
   
-  @media print, screen and (min-width:601px) 	{ 
+  @media  screen and (min-width:601px) 	{ 
     .xd-layout-2 { display:grid; grid-template-columns:minmax(40px, 270px) minmax(40px, 1fr);   }
     .xd-nav { position: sticky; top: 0;  height: 100vh; overflow-y: auto;
       
