@@ -174,7 +174,10 @@
   .xd-section-s { margin-top:var(--xd-size-m) !important; margin-bottom:var(--xd-size-m) !important }
   .xd-section-m { margin-top:var(--xd-size-l) !important; margin-bottom:var(--xd-size-l) !important }
   .xd-section-l { margin-top:var(--xd-size-xl) !important; margin-bottom:var(--xd-size-xl) !important }
+  .xd-section-xl { margin-top:var(--xd-size-xxl) !important; margin-bottom:var(--xd-size-xxl) !important }
   
+
+
   /*Warning important order this section must by after margin,section*/
   .xd-content-t 	{ display:block; max-width:540px; margin-left:auto; margin-right:auto }
   .xd-content-s, .xd-content 	{ display:block; max-width:960px; margin:0 auto }
