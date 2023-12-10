@@ -2,7 +2,7 @@
  * xd.css 1.1 by Marcin Kotynia | MIT License | github.com/kotynia/xd-css
  */
 
-:root 	{ 
+ :root 	{ 
   /*Sizes*/
   --xd-size-t:2px; --xd-size-s:4px; --xd-size-m:8px; --xd-size-l:16px; --xd-size-xl:34px; --xd-size-xxl:64px; 
   --xd-border-radius:6px; --xd-line-height:1.4; --xd-line-height-rem:1.4rem; 
@@ -33,7 +33,7 @@
   }
   
   /*! Extract from normalize.css v8.0.1 | MIT License  +  modifications  */
-  body 	{ min-height: 100vh; text-rendering: optimizeSpeed; margin:0}
+  body 	{ min-height: 100vh; margin:0}
   a 	  { background-color:transparent }
   abbr[title] 	{ border-bottom:none; text-decoration:underline; text-decoration:underline dotted }
   /* For images to not be able to exceed their container */
@@ -65,8 +65,8 @@
   a 	{ cursor:pointer; text-decoration:none; overflow-wrap:break-word; color:var(--xd-primary) }
   select[multiple] 	{ background:none; width:auto; height:auto; padding:0; margin:0; border-width:1px; border-style:inset; -moz-appearance:menulist; -webkit-appearance:menulist; appearance:menulist }
   canvas, svg 	{ vertical-align:middle }
-
-  code,pre 	{ background-color:var(--xd-gray1); font-size:0.9rem ; font-weight: normal; font-family: monospace; }
+  
+  code 	{ background-color:var(--xd-gray1); color:var(--xd-dark) ;font-size:0.9rem ; font-weight: normal; font-family: monospace;}
   pre 	{  page-break-inside:avoid;  max-width:100%; overflow:auto;  word-wrap:break-word; }
   /*Important for consistency in text area*/
   p 	{ margin-block-start:0 }
@@ -74,10 +74,10 @@
   /*Remove range selector*/
   input:disabled::-webkit-inner-spin-button 	{ -webkit-appearance:none; -moz-appearance:textfield; margin:0 }
   ::placeholder 	{ color:var(--xd-dark); opacity:0.6 }
-  ::-webkit-scrollbar 	{scrollbar-gutter: stable; width:10px ;height:10px;  }
+  ::-webkit-scrollbar 	{scrollbar-gutter:stable; width:10px ;height:10px;  }
   ::-webkit-scrollbar-thumb 	{ background-color:var(--xd-gray5) }
 
-  
+
   textarea {overflow-y: auto !important; } 
   del 	{ background-color:var(--xd-warning) }
   ins 	{ background-color:var(--xd-success) }
@@ -97,7 +97,7 @@
   .xd-padding, .xd-button, .xd-input, .xd-loading, .xd-link 	{ border:solid 1px transparent; line-height:var(--xd-line-height-rem); padding:var(--xd-size-s) }
   .xd-paddingy { border:solid 1px transparent; line-height:var(--xd-line-height-rem); padding-top:var(--xd-size-s); padding-bottom:var(--xd-size-s) }
   .xd-button 	{ color:var(--xd-dark); border-radius:var(--xd-border-radius); background-color:transparent; text-decoration:none; text-align:center; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; cursor:pointer; direction:ltr; display:inline-block; max-width:100% }
-  .xd-tag 	  { white-space:nowrap; border-radius:var(--xd-border-radius); color:var(--xd-dark); background-color:var(--xd-white); padding:0px 4px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:inline;min-width:1.5em }
+  .xd-tag 	  { white-space:nowrap; border-radius:var(--xd-border-radius); color:var(--xd-dark); background-color:var(--xd-white); padding:0px 4px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:inline;min-width:1.5em } 
   .xd-input 	{ color:var(--xd-dark); text-decoration:none; white-space:nowrap;   display:inline-block; background-color:var(--xd-gray0); 
     border-top:1px solid;border-left:1px solid;border-right:1px solid;border-color:transparent ; border-bottom:1px solid var(--xd-border);  max-width:100%; direction:ltr }
   textarea.xd-input 	{ white-space:normal }
@@ -132,6 +132,7 @@
   .xd-round-s { border-radius:var(--xd-size-s) }
   .xd-round-m { border-radius:var(--xd-size-m) }
   .xd-round-l { border-radius:var(--xd-size-l) }
+  .xd--round { border-radius:0 }
   
   .xd-tiny 	{ font-size:0.714rem !important }
   .xd-small,label, figcaption,small  	{ font-size:0.8rem !important ;line-height:1.3em;}
@@ -143,7 +144,7 @@
   /*UTILITY*/
   .xd-shadow 	{ box-shadow:rgba(0, 0, 0, 0.18) 0px 2px 4px }
   /*text-shadow:-0.04ex 0 0 currentColor, 0.04ex 0 0 currentColor; -webkit-text-stroke-width:0.04ex */
-  .xd-strong, b, strong 	{ font-weight:600 !important; }
+  .xd-strong, b, strong 	{ font-weight:600 !important; }/*Firefox bold 600*/
   .xd-underline 	{ text-decoration: underline;}
   /*direction:ltr cancel parent container ltr*/
   .xd-left 	{ text-align:left !important; direction:ltr}
@@ -175,9 +176,9 @@
   .xd-section-m { margin-top:var(--xd-size-l) !important; margin-bottom:var(--xd-size-l) !important }
   .xd-section-l { margin-top:var(--xd-size-xl) !important; margin-bottom:var(--xd-size-xl) !important }
   .xd-section-xl { margin-top:var(--xd-size-xxl) !important; margin-bottom:var(--xd-size-xxl) !important }
+
+
   
-
-
   /*Warning important order this section must by after margin,section*/
   .xd-content-t 	{ display:block; max-width:540px; margin-left:auto; margin-right:auto }
   .xd-content-s, .xd-content 	{ display:block; max-width:960px; margin:0 auto }
@@ -198,7 +199,7 @@
   td .xd-input:hover, .xd-input-table:hover 	{ background-color:var(--xd-gray0) }
   td .xd-image 	{ padding:1px 4px !important; vertical-align:middle }
   /*Grid helpers*/
-  .xd-container 	{ display:flex; flex-wrap:wrap; overflow-x:auto; align-items:baseline }
+  .xd-container 	{ display:flex; flex-wrap:wrap; overflow-x:auto; align-items:center /* align-items:baseline*/ }
   .xd-container-16 img 	{ aspect-ratio:16/9; object-fit:cover }
   .xd-container-4 img 	{ aspect-ratio:4/3; object-fit:cover }
 
@@ -216,8 +217,8 @@
   .xd-gapx-l 	{ column-gap:var(--xd-size-l) }
   
   /*Modal*/
-  .xd-modal 	{ z-index:100; display:none; padding:0; position:fixed; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0, 0, 0, 0.7) }
-  .xd-modal-content 	{ margin:auto; background-color:var(--xd-white); position:relative; padding:0; outline:0; width:80vw }
+  .xd-modal 	{ z-index:100; display:none; padding:0; position:fixed; left:0; top:0; width:100vw; height:100vh; overflow:auto; background-color:rgba(0, 0, 0, 0.3) ;flex-wrap:wrap;justify-content:center}
+  .xd-modal-content 	{  background-color:var(--xd-white);  padding:0 var(--xd-size-m) ; outline:0; width:80vw ;min-height:100vh}
   
   .xd-hover:hover 	{ background-color:var(--xd-success) }
   *:not(img, .xd--focus):focus-visible,.xd-focus:hover, table.xd-table tbody tr:hover, .xd-button:hover , .xd-nav-item:hover	{ z-index:10; outline-width:3px; outline-style:solid; outline-color:var(--xd-outline); outline-offset:-3px }
@@ -226,7 +227,7 @@
   /*Desktop, tablet*/
   @media print, screen and (min-width:601px) 	{ 
   .xd-container-desktop 	{ display:flex; flex-wrap:wrap; overflow-x:auto; align-items:center }
-  .xd-form 	{ display:grid; align-items:center; row-gap:var(--xd-size-m); grid-template-columns:minmax(40px, 130px) minmax(40px, 1fr); gap:var(--xd-size-s) }
+  .xd-form 	{ display:grid; align-items:baseline; row-gap:var(--xd-size-m); grid-template-columns:minmax(40px, 130px) minmax(40px, 1fr); gap:var(--xd-size-s) }
   .xd-hide-desktop 	{ display:none !important }
   
   .xd-grid-l1 	{ display:grid; grid-template-columns:repeat(1, minmax(10px, 1fr)) }
@@ -256,16 +257,18 @@
   .xd-span-l24 	{ grid-column:span 24 }
   }
   
+  .xd-form-v 	{ display:grid; row-gap:var(--xd-size-m); gap:var(--xd-size-s);}
+ 
+
   /*MOBILE*/
-  @media screen and (max-width:600px) 	{ :root 	{ --xd-line-height:1.6; --xd-line-height-rem:1.6rem }
-  .xd-content ,.xd-content-m ,.xd-content-l {padding:0 var(--xd-size-s)}
+  @media screen and (max-width:600px) 	{ :root 	{ --line-height:1.6; --line-height-rem:1.6rem }
+  /* .xd-content ,.xd-content-m ,.xd-content-l {padding:0 var(--xd-size-s)} */
   html 	{ font-size:16px }
-  .xd-modal 	{ padding-top:30px }
-  .xd-modal-content 	{ margin:0 10px; width:auto !important }
+  .xd-modal 	{ justify-content:flex-end }
   .xd-center-mobile 	{ text-align:center }
   .xd-box-mobile 	{ display:block !important; width:100% }
   .xd-hide-mobile 	{ display:none !important }
-  .xd-form 	{ display:grid; row-gap:var(--xd-size-m); gap:var(--xd-size-s); grid-template-columns:minmax(50px, 80px) minmax(50px, 1fr); align-items:center }
+  .xd-form 	{ display:grid; row-gap:var(--xd-size-m); gap:var(--xd-size-s); grid-template-columns:minmax(50px, 80px) minmax(50px, 1fr); align-items:baseline }
   .xd-grid-l1 	{ display:grid; grid-template-columns:repeat(1, minmax(10px, 1fr)) }
   .xd-grid-l2 	{ display:grid; grid-template-columns:repeat(1, minmax(10px, 1fr)) }
   .xd-grid-l3 	{ display:grid; grid-template-columns:repeat(1, minmax(10px, 1fr)) }
@@ -344,7 +347,7 @@
     vertical-align: baseline;
     -webkit-print-color-adjust: exact; }
     html 	{ font-size:10pt; font-family:Arial; }
-    .xd-nav ,nav, .xd-hide-print, .xd-button 	{ display:none !important }
+    .xd-nav, nav, .xd-hide-print, .xd-button 	{ display:none !important }
     .xd-input { background-color:white;}
     .xd-responsive 	{ display:block; overflow-x:visible }
     @page 	{ size:A4 portrait; margin:10mm }
@@ -359,14 +362,14 @@
     article ,.xd-box, .xd-image, td 	{ page-break-before:auto; page-break-after:auto; page-break-inside:avoid }
   }
   
-  @media  screen and (min-width:601px) 	{ 
+  @media screen and (min-width:601px) 	{ 
+    .xd-layout-2-mini { display:grid; grid-template-columns:minmax(40px, 70px) minmax(40px, 1fr);   }
     .xd-layout-2 { display:grid; grid-template-columns:minmax(40px, 270px) minmax(40px, 1fr);   }
-    .xd-nav { position: sticky; top: 0;  height: 100vh; overflow-y: auto;
-      
-    }
-    .xd-nav::-webkit-scrollbar 	{scrollbar-gutter: stable; width:5px ;height:5px;  }
-    .xd-nav::-webkit-scrollbar-thumb 	{ background-color:var(--xd-white) }
-    .xd-nav:hover::-webkit-scrollbar-thumb 	{ background-color:var(--xd-gray3) }
+    .xd-layout-2  .xd-nav, .xd-layout-2-mini .xd-nav { position: sticky; top: 0;   height: 100vh; overflow-y: auto;}
+    .xd-nav::-webkit-scrollbar{scrollbar-gutter:stable;width:5px;height:5px}
+    .xd-nav::-webkit-scrollbar-thumb{background-color:var(--xd-background)}
+    .xd-nav:hover::-webkit-scrollbar-thumb{background-color:var(--xd-gray3)}
+
   }
 
   .xd-loading 	{ animation:xd-loading 1s step-start infinite; animation-delay:0.5s; color:var(--xd-gray4); text-align:center }
@@ -379,7 +382,12 @@
   .router-link-exact-active:not(.xd--active), .xd-active:not(.xd--active) 	{ box-shadow:inset 0 -2px 0 var(--xd-brand) !important }
   .xd-link 	{ text-overflow:ellipsis; white-space:nowrap; overflow:hidden;  color:var(--xd-blue6); cursor:pointer }
   .xd-link:hover 	{ text-decoration:underline }
-  
+  .xd-hover:hover 	{ background-color:var(--xd-success) }
+  *:not(img, .xd--focus):focus-visible,.xd-focus:hover, table.xd-table tbody tr:hover, .xd-button:hover , .xd-nav-item:hover	
+  { z-index:10; 
+     outline-width:3px; outline-style:solid; outline-color:var(--xd-outline); outline-offset:-3px } 
+
+
   /*COLORS Beyond this line, white/dark are base color should be first always*/
   .xd-white 	{ background-color:var(--xd-white); color:var(--xd-dark) !important }
   .xd-dark 	  { background-color:var(--xd-dark); color:var(--xd-white) !important }
@@ -388,7 +396,7 @@
   .xd-success, .xd-green 	{ background-color:var(--xd-success); color:#FFF !important }
   .xd-danger, .xd-red 	{ background-color:var(--xd-danger); color:#FFF !important }
   .xd-warning, .xd-orange 	{ background-color:var(--xd-warning); color:#FFF !important }
-  .xd-info 	  { background-color:var(--xd-info); color:var(--xd-dark) !important }
+  .xd-info 	  { background-color:var(--xd-info); color:var(--xd-gray4) !important }
   .xd-light 	{ background-color:var(--xd-light); color:var(--xd-dark) !important }
   .xd-gray 	  { background-color:var(--xd-gray4); color:var(--xd-dark) !important }
   .xd-selected 	{ background-color:var(--xd-selected); color:var(--xd-dark) !important }
@@ -457,7 +465,7 @@
   .xd-text-success 	{ color:var(--xd-success) !important }
   .xd-text-danger 	{ color:var(--xd-danger) !important }
   .xd-text-warning 	{ color:var(--xd-warning) !important }
-  .xd-text-info 	{ color:var(--xd-info) !important }
+  .xd-text-info 	{ color:var(--xd-gray4) !important }
   .xd-text-white 	{ color:var(--xd-white) !important }
   .xd-text-light 	{ color:var(--xd-light) !important }
   .xd-text-dark 	{ color:var(--xd-dark) !important }
