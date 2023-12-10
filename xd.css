@@ -96,6 +96,7 @@
   
   .xd-padding, .xd-button, .xd-input, .xd-loading, .xd-link 	{ border:solid 1px transparent; line-height:var(--xd-line-height-rem); padding:var(--xd-size-s) }
   .xd-paddingy { border:solid 1px transparent; line-height:var(--xd-line-height-rem); padding-top:var(--xd-size-s); padding-bottom:var(--xd-size-s) }
+  .xd-paddingx { border:solid 1px transparent; padding-left:var(--xdsize-s); padding-right:var(--xdsize-s) }
   .xd-button 	{ color:var(--xd-dark); border-radius:var(--xd-border-radius); background-color:transparent; text-decoration:none; text-align:center; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; cursor:pointer; direction:ltr; display:inline-block; max-width:100% }
   .xd-tag 	  { white-space:nowrap; border-radius:var(--xd-border-radius); color:var(--xd-dark); background-color:var(--xd-white); padding:0px 4px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:inline;min-width:1.5em } 
   .xd-input 	{ color:var(--xd-dark); text-decoration:none; white-space:nowrap;   display:inline-block; background-color:var(--xd-gray0); 
@@ -124,7 +125,13 @@
   .xd-paddingy-l 	{ padding-top:var(--xd-size-l); padding-bottom:var(--xd-size-l) }
   .xd-paddingy-xl { padding-top:var(--xd-size-xl); padding-bottom:var(--xd-size-xl) }
   .xd-paddingy-xxl 	{ padding-top:var(--xd-size-xxl); padding-bottom:var(--xd-size-xxl) }
-  
+  .xd-paddingx-t 	{ padding-left:var(--xd-size-t); padding-right:var(--xd-size-t) }
+  .xd-paddingx-s 	{ padding-left:var(--xd-size-s); padding-right:var(--xd-size-s) }
+  .xd-paddingx-m 	{ padding-left:var(--xd-size-m); padding-right:var(--xd-size-m) }
+  .xd-paddingx-l 	{ padding-left:var(--xd-size-l); padding-right:var(--xd-size-l) }
+  .xd-paddingx-xl { padding-left:var(--xd-size-xl); padding-right:var(--xd-size-xl) }
+  .xd-paddingx-xxl 	{ padding-left:var(--xd-size-xxl); padding-right:var(--xd-size-xxl) }
+
   .xd-box 	{ display:inline-block; width:100% }
   
   .xd-round 	{ border-radius:var(--xd-border-radius) }
@@ -263,7 +270,7 @@
   /*MOBILE*/
   @media screen and (max-width:600px) 	{ :root 	{ --line-height:1.6; --line-height-rem:1.6rem }
   /* .xd-content ,.xd-content-m ,.xd-content-l {padding:0 var(--xd-size-s)} */
-  html 	{ font-size:16px }
+  html 	{ font-size:18px }
   .xd-modal 	{ justify-content:flex-end }
   .xd-center-mobile 	{ text-align:center }
   .xd-box-mobile 	{ display:block !important; width:100% }
